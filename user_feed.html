@@ -28,14 +28,18 @@
                 Dropdown
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="#">Settings</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Logout</a>
               </div>
             </li>
           </ul>
-          <h2 id="jade-logo">Jade Space</h2>
+<!-- Can't figure out how to center this text element within the navbar          
+          <div class="navbar-header">
+              <h2 id="jade-logo">Jade Space</h2>
+            </div>
+          --> 
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -51,16 +55,16 @@
 <div class="feed-body">
     <!-- Area for USER AVATAR, text display 'MY FEED'-->
 <div class="row">
-  <div class="col-sm">
-        <img src="assets/images/placeholder_thumb.png" class="user-av-thumb"></img>USER AVATAR HERE
-  </div>
+  <div class="col-sm-6">
+      <img src="assets/images/placeholder_thumb.png" id="user-av-thumb" class="rounded"></img>
+</div>
 
-  <div class="col-sm">
+  <div class="col-sm-6">
     MY FEED
   </div>
 
   <div class="card">
-        <div class="card-body"></div>
+        <div class="card-body">
           USERNAME submitted ''
         </div>
       </div>
@@ -70,6 +74,13 @@
         This is some text within a card body.
     </div>
   </div>
+
+    <div class="card">
+      <div class="card-body">
+          This is some text within a card body.
+      </div>
+    </div>
+
 <!-- ideally, these all have an x-button to delete notifications
     - a 'CLEAR' button at the bottom below notifications to delete all displayed alerts -->
 </div> <!-- closes feed-body -->
