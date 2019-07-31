@@ -50,40 +50,50 @@
 <!-- Underneath Jade Space header will have:
     1. Thumbnail user avatar
     2. Words "My Feed" (or other) within block
-    3. Search field 
   Feed will then have notifications of new content provided by creators/artists they follow -->
-<div class="feed-body">
+<div class="container">
     <!-- Area for USER AVATAR, text display 'MY FEED'-->
-<div class="row">
-  <div class="col-sm-6">
-      <img src="assets/images/placeholder_thumb.png" id="user-av-thumb" class="rounded"></img>
-</div>
-
-  <div class="col-sm-6">
-    MY FEED
+  <div class="row">
+    <div class="col-sm-6">
+        <img src="assets/images/placeholder_thumb.png" id="user-av-thumb" class="rounded"></img>
   </div>
 
-  <div class="card">
-        <div class="card-body">
-          USERNAME submitted ''
-        </div>
+  <div class="col-sm-6" id="feed-banner">
+    <div class="card">
+      <div class="card-body">
+        MY FEED.
       </div>
-
-  <div class="card">
-    <div class="card-body">
-        This is some text within a card body.
     </div>
   </div>
 
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+          USERNAME submitted ''
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+   <div class="card">
+    <div class="card-body">
+        This is some text within a card body.
+    </div>
+   </div>
+  </div>
+
+  <div class="row">
     <div class="card">
       <div class="card-body">
           This is some text within a card body.
       </div>
     </div>
-
+  </div>
+  
 <!-- ideally, these all have an x-button to delete notifications
     - a 'CLEAR' button at the bottom below notifications to delete all displayed alerts -->
-</div> <!-- closes feed-body -->
+</div>
+</div>
 
 <div id="footer">
     Copyright © JadeSpace 2019    

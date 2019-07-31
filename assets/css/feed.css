@@ -1,8 +1,8 @@
 /* GENERAL PAGE CONTENT */
 /* Do NOT try to combine html and body elements. This will prevent sticky footer from working. - EMMA */
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
@@ -13,17 +13,19 @@ body {
 #user-av-thumb {
   height: 100px;
   width: 100px;
-  margin: 50px;
 }
 
+/* #feed-banner {
+
+} */
+
 .card { 
-  margin: auto;
   margin-bottom: 50px;
 }
 
 .card-body {
   height: 182px;
-  width: 1400px;
+  padding-right: 800px;
   justify-content: center;
   text-align: center;
 }
