@@ -44,3 +44,7 @@ body {
   text-align: center;
   padding: 5px; 
 }
+
+#cardBox{
+  height: 100px;
+}
