@@ -1,31 +1,50 @@
 /* GENERAL PAGE CONTENT */
-html,body {
-    height: 100%;
-    background-color:rgb(127, 202, 165);
+/* Do NOT try to combine html and body elements. This will prevent sticky footer from working. - EMMA */
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-.user-av-thumb {
+body {
+  margin-bottom: 60px;
+  background-color:rgb(127, 202, 165);
+}
+
+#topRow {
+  margin-top: 3em;
+}
+
+#user-av-thumb {
   height: 100px;
   width: 100px;
-  margin: 10px;
+  margin-left: 5em;
+}
+
+#feed-body {
+  height: 100px;
+}
+
+.card {
+  height: 5rem;
+  margin-bottom: 50px;
 }
 
 .card-body {
-  height: 182px;
-  justify-content: center;
   text-align: center;
 }
 
-
-
 #footer {
-    position: absolute;
-    background-color:rgb(54, 150, 102);
-    color:white;
-    width: 100%;
-    justify-content: center;
-    text-align:center;
-    bottom: 0;
-    padding:5px; 
-    display: flex
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem; 
+  width: 100%;
+  background-color:rgb(54, 150, 102);
+  color:white;
+  justify-content: center;
+  text-align: center;
+  padding: 5px; 
+}
+
+#cardBox{
+  height: 100px;
 }

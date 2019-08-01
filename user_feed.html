@@ -28,14 +28,18 @@
                 Dropdown
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="#">Settings</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Logout</a>
               </div>
             </li>
           </ul>
-          <h2 id="jade-logo">Jade Space</h2>
+<!-- Can't figure out how to center this text element within the navbar       -->     
+          <div class="navbar-header">
+              <h2 id="jade-logo">Jade Space</h2>
+            </div>
+         
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -46,33 +50,58 @@
 <!-- Underneath Jade Space header will have:
     1. Thumbnail user avatar
     2. Words "My Feed" (or other) within block
-    3. Search field 
   Feed will then have notifications of new content provided by creators/artists they follow -->
-<div class="feed-body">
+<div class="container">
     <!-- Area for USER AVATAR, text display 'MY FEED'-->
-<div class="row">
-  <div class="col-sm">
-        <img src="assets/images/placeholder_thumb.png" class="user-av-thumb"></img>USER AVATAR HERE
+  <div class="row" id="topRow">
+    <div class="col-md-3">
+        <img src="assets/images/placeholder_thumb.png" id="user-av-thumb" class="rounded"></img>
   </div>
 
-  <div class="col-sm">
-    MY FEED
-  </div>
-
-  <div class="card">
-        <div class="card-body"></div>
-          USERNAME submitted ''
-        </div>
+  <div class="col-md-6" id="feed-banner">
+    <div class="card" id= "cardBox">
+      <div class="card-body">
+        MY FEED
       </div>
-
-  <div class="card">
-    <div class="card-body">
-        This is some text within a card body.
     </div>
   </div>
+</div> <!-- to close Row for avatar and My Feed -->
+
+<div id="feed-body">
+  <div class="row">
+    <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+          USERNAME submitted ''
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="row">
+    <div class="col-md-12">
+   <div class="card">
+    <div class="card-body">
+        EXAMPLE of how music submission would display
+    </div>
+   </div>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+          This is some text within a card body.
+      </div>
+    </div>
+  </div>
+</div>
+</div>  
 <!-- ideally, these all have an x-button to delete notifications
     - a 'CLEAR' button at the bottom below notifications to delete all displayed alerts -->
-</div> <!-- closes feed-body -->
+</div>
+</div>
 
 <div id="footer">
     Copyright © JadeSpace 2019    
