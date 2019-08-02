@@ -1,0 +1,32 @@
+html {
+    background-color: rgb(52, 219, 163)
+}
+
+#projects {
+    color: white;
+}
+
+#contact-b {
+    background-color: rgb(103, 182, 103);
+    color: white;
+}
+
+
+#contact {
+    color: white;
+}
+
+#button {
+    background-color: rgb(103, 182, 103);
+}
+
+#footer {
+    background-color: rgb(103, 182, 103);
+    color: white;
+}
+
+.w3-top {
+    background-color: rgb(103, 182, 103);
+    color: white;
+}
+ 
