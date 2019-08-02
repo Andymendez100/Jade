@@ -14,6 +14,12 @@ body {
   margin-top: 3em;
 }
 
+.img-thumbnail.float-left {
+ margin-left: 50px;
+ height: 150px;
+ width: 150px;
+}
+
 .navbar-header{
   margin-right: 22rem;
 }
@@ -32,8 +38,10 @@ body {
   height: 100px;
 }
 
+#cardBox{
+  height: 100px;
+}
 .card {
-  height: 5rem;
   margin-bottom: 50px;
 }
 
@@ -53,6 +61,3 @@ body {
   padding: 5px; 
 }
 
-#cardBox{
-  height: 100px;
-}
