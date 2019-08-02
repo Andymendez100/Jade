@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="views/assets/css/feed.css">
+    <title>Jade User Feed</title>
+</head>
+
+<body>              
+<!-- Page content -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="#">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+          </ul>
+<!-- Can't figure out how to center this text element within the navbar -->     
+          <div class="navbar-header">
+              <h2 id="jade-logo">JS Jade Space</h2>
+            </div>
+         
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+<!-- Underneath Jade Space header will have:
+    1. Thumbnail user avatar
+    2. Words "My Feed" (or other) within block
+  Feed will then have notifications of new content provided by creators/artists they follow -->
+<div class="container">
+    <!-- Area for USER AVATAR, text display 'MY FEED'-->
+  <div class="row" id="topRow">
+    <div class="col-md-3">
+        <img src="views/assets/images/placeholder_thumb.png" id="user-av-thumb" class="rounded"></img>
+  </div>
+
+  <div class="col-md-6" id="feed-banner">
+    <div class="card" id="cardBox">
+      <div class="card-body" style="margin-top: 10px;">
+        <h3>My Feed</h3>
+      </div>
+    </div>
+  </div>
+</div> <!-- to close Row for avatar and My Feed -->
+
+<div id="feed-body">
+    <div class="row">
+        <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <p class="lead">Congratulations on joining JadeSpace! We are happy to welcome you to our community of artists.
+              <br>Find artists to follow, make friends, or just browse art to your heart's delight.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+          <img src="views/assets/images/profile_pic.jpeg" class="img-thumbnail float-left">
+          <p class="lead">
+            <a href="#"><strong>CHUYLOOPS</strong></a> submitted 'Profile Pic' to their gallery!
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <div class="row">
+    <div class="col-md-12">
+   <div class="card">
+    <div class="card-body">
+        <img src="views/assets/images/namroud_tape_unsplash.jpg" class="img-thumbnail float-left">
+      <p class="lead">EXAMPLE of how music submission would display</p>
+    </div>
+   </div>
+  </div>
+</div>
+
+</div>  
+<!-- ideally, these all have an x-button to delete notifications
+    - a 'CLEAR' button at the bottom below notifications to delete all displayed alerts -->
+</div>
+</div>
+
+<!-- This footer is a MENACE. Trying to get it to be a proper sticky footer is like pulling teeth. -->
+<footer>
+    <div class="container">
+      Copyright &copy; JadeSpace 2019
+    </div>
+</footer>  
+
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
