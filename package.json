@@ -19,7 +19,15 @@
   },
   "homepage": "https://github.com/Andymendez100/Jade#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.11.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
