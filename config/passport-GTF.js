@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  var passport = require("passport");
-  var GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
-  var FacebookStrategy = require("passport-facebook").Strategy;
-  var TwitterStrategy = require("passport-twitter").Strategy;
+  const passport = require("passport");
+  const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+  const FacebookStrategy = require("passport-facebook").Strategy;
+  const TwitterStrategy = require("passport-twitter").Strategy;
   const key = require("./key");
 
   // Use the GoogleStrategy within Passport.
@@ -29,7 +29,7 @@ $(document).ready(function() {
       {
         clientID: key.facebook.clientID,
         clientSecret: key.facebook.clientSecret,
-        callbackURL: "http://www.example.com/auth/facebook/callback"
+        callbackURL: "http://www.facebook.com"
       },
       function(accessToken, refreshToken, profile, done) {
         User.findOrCreate(
