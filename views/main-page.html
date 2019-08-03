@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>JADE_SPACE</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="assests/css/main-page.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
   <title>JADE_SPACE</title>
 </head>
 <body>
   <!-- Navbar (sit on top) -->
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark" id="navbar">
+
+  <nav class="navbar navbar-expand-lg bg-success text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">JADE SPACE</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-success text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-dark" id="navbar">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,7 +64,7 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
-  </nav>
+  </nav> -->
 <!-- <div class="w3-top">
   <div class="w3-bar w3-wide w3-padding w3-card">
     <a href="#home" class="w3-bar-item w3-button"><b>JS</b>  Jade Space </a>
@@ -163,8 +189,8 @@
                       </div>
                   </div>
               </div>
-              <button class="btn btn-primary leftLst"><</button>
-              <button class="btn btn-primary rightLst">></button>
+              <button class="btn leftLst" id="next-btn"><</button>
+              <button class="btn rightLst" id="next-btn">></button>
           </div>
     </div>
 
@@ -173,7 +199,7 @@
       <h3 class="w3-border-bottom w3-border-light-green w3-padding-16">FOLLOWERS</h3>
     </div>
   
-    <div class="w3-row-padding">
+    <div class="w3-row-padding" id="about">
       <div class="w3-col l3 m6 w3-margin-bottom" id="followers">
         <img src="./assests/images/Profile-512.png" alt="John" style="width:100px; height:100px;">
         <h3>CHUYLOOPS</h3>
@@ -207,6 +233,7 @@
     </div>
   
     <!-- Contact Section -->
+
     <div class="w3-container w3-padding-32" id="contact">
       <h3 class="w3-border-bottom w3-border-light-green w3-padding-16">Contact</h3>
       <p>Lets get in touch to talk or exchange art.</p>
@@ -225,11 +252,50 @@
   
   
   <!-- Footer -->
-  <footer class="page-footer font-small green" id="footer">
+
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+
+        <!-- Footer Location -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Location</h4>
+          <p class="lead mb-0">1200 University Ave, Riverside, CA 92507
+            <br>Riverside, CA 65243</p>
+        </div>
+
+        <!-- Footer Social Icons -->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">Around the Web</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-facebook-f"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-linkedin-in"></i>
+          </a>
+          <a class="btn btn-outline-light btn-social mx-1" href="#">
+            <i class="fab fa-fw fa-dribbble"></i>
+          </a>
+        </div>
+
+        <!-- Footer About Text -->
+        <div class="col-lg-4">
+          <h4 class="text-uppercase mb-4">About JADE SPACE</h4>
+          <p class="lead mb-0">JADE_SPACE is a free to use website to unlock your art desires.</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- <footer class="page-footer font-small green" id="footer">
       <div class="footer-copyright text-center py-3">© 2018 Copyright:
     <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
   </div>
-  </footer>
+  </footer> -->
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
