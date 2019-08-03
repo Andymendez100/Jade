@@ -1,4 +1,6 @@
-const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+const passport = require("passport");
+const GoogleStrategy = require("passport-google-oauth").OAuthStrategy;
+
 const key = require("./key");
 
 // Use the GoogleStrategy within Passport.

@@ -1,9 +1,8 @@
 $(document).ready(function() {
-  const passport = require("passport");
-  const TwitterStrategy = require("passport-twitter").Strategy;
+  const passport = require("passport"),
+    TwitterStrategy = require("passport-twitter").Strategy;
   const key = require("./key");
-  
-  
+
   passport.use(
     new TwitterStrategy(
       {

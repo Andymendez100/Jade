@@ -1,4 +1,5 @@
-const FacebookStrategy = require("passport-facebook").Strategy;
+const passport = require("passport"),
+  FacebookStrategy = require("passport-facebook").Strategy;
 const key = require("./key");
 
 passport.use(
@@ -6,7 +7,7 @@ passport.use(
     {
       clientID: key.facebook.clientID,
       clientSecret: key.facebook.clientSecret,
-      callbackURL: "http://www.facebook.com"
+      callbackURL: "https://www.facebook.com"
     },
     function(accessToken, refreshToken, profile, done) {
       User.findOrCreate(
