@@ -1,15 +1,14 @@
 $(document).ready(() => {
-    // Getting out form and inputs
 
-    const loginForm = $("#login");
-    const emailInput = $("#emailInput");
-    const passwordInput = $("#passwordInput");
+    const loginForm = $('#loginButton');
+    const emailInput = $("#emailInput")
+    const passwordInput = $('#passwordInput')
 
-    // When the user clicks submit, we validate there's an email and password entered
-
-    loginForm.on("submit", (event) => {
-        event.preventDefalut();
-        let userData = {
+    // When the form is submitted, we validate there's an email and password entered
+    loginForm.on("click", function (event) {
+        console.log("Asdawd");
+        event.preventDefault();
+        var userData = {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim()
         };
@@ -22,7 +21,7 @@ $(document).ready(() => {
         loginUser(userData.email, userData.password);
         emailInput.val("");
         passwordInput.val("");
-    })
+    });
 
     // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
     function loginUser(email, password) {
@@ -35,7 +34,9 @@ $(document).ready(() => {
             // If there's an error, log the error
         }).catch(function (err) {
             if (err.status === 401) {
-                alert("Invalid email or password");
+                alert("test");
+
+
             }
         });
     }
