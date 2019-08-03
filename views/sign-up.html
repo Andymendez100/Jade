@@ -1,42 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assests/css/sign-up.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+​
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assests/css/sign-up.css" />
     <title>JADE/SIGN_UP</title>
-</head>
-
-<body>
-
+  </head>
+  <body>
     <div id="login-box">
         <div class="left-box">
             <h1> Sign Up</h1>
             <input type="text" name="email" placeholder="Email" />
             <input type="text" name="password" id="passWordInput" placeholder="Password" />
-            <a class=“waves-effect waves-light btn modal-trigger” href=“#modal1">
-                <input type=“submit” name=“signop-button” value=“sign up” />
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">
+              <input type="submit" name="signop-button" value="sign up" />
             </a>
-            <input type="submit" name="signop-button" id="signUpButton" value="sign up" />
         </div>
         <div class="right-box">
             <span class="signinwith">Sign in with<br />Social Network
-
-            </span>
-
-            <button class="social facebook">login in with facebook</button>
-            <button class="social twitter">login in with twitter</button>
-            <button class="social google ">login in with google+</button>
+​
+        <button class="social facebook">
+          <a href="/auth/facebook">Login with Facebook</a>
+        </button>
+        <button class="social twitter">
+          <a href="/auth/twitter">Sign in with Twitter</a>
+        </button>
+        <button class="social google ">
+          <a href="/auth/google">Sign In with Google+</a>
+        </button>
+      </div>
+      <div class="or">OR</div>
+​
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <h4>Mobile App Disclaimer</h4>
+          <p>
+            The information provided by "JADESPACE LLC" ("we", "us", or "our")
+            on Jadespace.com and our mobile application is provided in good
+            faith, however we make no representation or warranty of any kind,
+            expressed or implied, regarding the accuracy, adequacy, validity,
+            reliability, availability, or completeness of any information on the
+            Site or our mobile application.
+          </p>
+          <p>
+            Under no circumstances shall we have any liability to you for any
+            monies exchanged, any loss or damage of any kind incurred as a
+            result of the use of the site or our mobile application. Your use of
+            the site and our mobile application and you reliance on any
+            information on these platforms is solely at your own risk. if you
+            have any questions pertaining to this disclaimer email us at
+            questions@jadespace.com.
+          </p>
         </div>
-        <div class="or">
-
-            <p>Or log in <a href="./login-form.html">here</a></p>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+            >I Understand</a
+          >
         </div>
-
+      </div>
     </div>
-</body>
-<script src="./assests/javascript/signUp.js"></script>
-
+    <script src="./assests/javascript/sign-up.js"></script>
+  </body>
 </html>
