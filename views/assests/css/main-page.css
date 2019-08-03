@@ -16,7 +16,7 @@ html {
 }
 
 #contact {
-    color: white;
+    color: rgb(103, 182, 103);
 }
 
 #button {
@@ -34,12 +34,32 @@ html {
     color: white;
 }
 
-.MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
-    .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
-        .MultiCarousel .MultiCarousel-inner .item { float: left;}
+.MultiCarousel { 
+    float: left; 
+    overflow: hidden; 
+    padding: 15px; width: 100%; 
+    position:relative; 
+}
+
+.MultiCarousel .MultiCarousel-inner { 
+    transition: 1s ease all; 
+    float: left; 
+}
+
+.MultiCarousel .MultiCarousel-inner .item { 
+float: left;
+}
         .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:#f1f1f1; color:#666;}
     .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute; border-radius:50%;top:calc(50% - 20px); }
     .MultiCarousel .leftLst { left:0; }
     .MultiCarousel .rightLst { right:0; }
     
         .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none; background:#ccc; }
+
+.modal-body {
+    background-color: rgb(103, 182, 103);
+}
+
+.modal-header {
+    color: rgb(103, 182, 103);
+}
