@@ -8,6 +8,7 @@ const passport = require("./config/passport");
 const facebook = require ("./config/passport-facebook")
 // const twitter = require ("./config/passport-twitter")
 // const google = require("./config/passport-google")
+
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
