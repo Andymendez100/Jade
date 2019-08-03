@@ -25,6 +25,10 @@ body {
   margin-right: 22rem;
 }
 
+#clearButton {
+  margin-left: 10px;
+}
+
 #jade-logo{
   color: white;
 }
