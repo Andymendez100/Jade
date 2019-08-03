@@ -54,7 +54,7 @@ input[type="submit"] {
     margin-bottom: 28px;
     width: 120px;
     height: 32px;
-    background: #269943;
+    background: rgb(54, 150, 102);
     border: none;
     border-radius: 2px;
     color: #fff;
@@ -129,4 +129,15 @@ button.social {
 
 .google {
     background: rgba(214, 68, 10, 0.938);
+}
+
+footer {
+  position: fixed;
+  bottom: 0; 
+  width: 100%;
+  background-color:rgb(54, 150, 102);
+  color:white;
+  justify-content: center;
+  text-align: center;
+  padding: 15px; 
 }
