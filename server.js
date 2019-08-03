@@ -4,7 +4,10 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
-//
+//passport for facebook/twitter/google
+const facebook = require ("./config/passport-facebook")
+// const twitter = require ("./config/passport-twitter")
+// const google = require("./config/passport-google")
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
