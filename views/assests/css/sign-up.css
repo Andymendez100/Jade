@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background: #efefef;
     font-size: 16px;
+    background-color:rgb(127, 202, 165, 0.5);
     color: #777;
     font-family:sans-serif;
     font-weight: 300; 
@@ -79,7 +79,7 @@ input[type="submit"]:focus {
     padding: 40px;
     width: 300px;
     height: 400px;
-    background-image: url(/assests/images/green-background.jpg);
+    background-image: url(../images/green-background.jpg);
     background-size: cover;
     background-position: center;
 }
