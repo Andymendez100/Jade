@@ -54,7 +54,7 @@ input[type="submit"] {
     margin-bottom: 28px;
     width: 120px;
     height: 32px;
-    background: #269943;
+    background: rgb(54, 150, 102);
     border: none;
     border-radius: 2px;
     color: #fff;
@@ -105,13 +105,19 @@ input[type="submit"]:focus {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+a {
+    color: rgba(245, 245, 245, 0.918);
+}
+
 button.social {
+    padding: 5px;
+    font-size: 90%;
+    margin-top: 20px;
     margin-bottom: 20px;
     width: 220px;
-    height: 36px;
+    height: 100%;
     border: none;
     border-radius: 2px;
-    color: #fff;
     font-family: sans-serif;
     font-weight: 500;
     transition: 0.2s ease;
@@ -133,4 +139,15 @@ button.social {
 
 .google {
     background: rgba(214, 68, 10, 0.938);
+}
+
+footer {
+  position: fixed;
+  bottom: 0; 
+  width: 100%;
+  background-color:rgb(54, 150, 102);
+  color:white;
+  justify-content: center;
+  text-align: center;
+  padding: 15px; 
 }
