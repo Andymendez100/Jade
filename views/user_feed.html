@@ -1,79 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Custom CSS override -->
-    <link rel="stylesheet" href="../views/assests/css/feed.css">
-    <title>Jade User Feed</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../views/assests/css/feed.css">
+  <title>Jade User Feed</title>
 </head>
 
-<body>              
-<!-- Page content -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./main-page.html"><strong>JS Jade Space</strong><span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item disabled" href="#">My Profile</a>
-                <a class="dropdown-item disabled" href="#">Submit Art</a>
-                <a class="dropdown-item disabled" href="#">Settings</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Logout</a>
-              </div>
-            </li>
-          </ul>
-<!-- Can't figure out how to center this text element within the navbar -->     
-          <div class="navbar-header">
-              
-            </div>
-         
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+<body>
+  <!-- Page content -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./main-page.html"><strong>JS Jade Space</strong><span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">My Profile</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+      </ul>
+  
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
 
-<!-- Underneath Jade Space header will have:
+  <!-- Underneath Jade Space header will have:
     1. Thumbnail user avatar
     2. Words "My Feed" (or other) within block
   Feed will then have notifications of new content provided by creators/artists they follow -->
-<div class="container">
+  <div class="container">
     <!-- Area for USER AVATAR, text display 'MY FEED'-->
-  <div class="row" id="topRow">
-    <div class="col-md-3">
+    <div class="row" id="topRow">
+      <div class="col-md-3" id="userInput">
         <img src="../views/assests/images/placeholder_thumb.png" id="user-av-thumb" class="rounded"></img>
-  </div>
-
-  <div class="col-md-6" id="feed-banner">
-    <div class="card" id="cardBox">
-      <div class="card-body" style="margin-top: 10px;">
-        <h3>My Feed</h3>
       </div>
-    </div>
-  </div>
-</div> <!-- to close Row for avatar and My Feed -->
+
+
+      <div class="col-md-6" id="feed-banner">
+        <div class="card" id="cardBox">
+          <div class="card-body" style="margin-top: 10px;">
+            <h3>My Feed</h3>
+          </div>
+        </div>
+      </div>
+      <!-- User input to put pictures and write a post-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <form>
+              Upload a picture:<input type="file" name="myFile" id="fileInput" accept="audio/*,video/*,image/*"><br>
+              Add a comment:<input type="text" id="commentInput"><br>
+              <button type="submit" id="fileSubmit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div> <!-- to close Row for avatar and My Feed -->
 
 <div id="feed-body">
     <div class="row" id="clearButton">
       <p><a href="#" class="btn btn-primary float-left">Clear All</a></p>
     </div>
+    <!-- ideally, these all have an x-button to delete notifications
+    - a 'CLEAR' button at the bottom below notifications to delete all displayed alerts
+    - when notifs are cleared, show message "No New messages" -->
     
     <div class="row">
       <div class="col-md-12">
@@ -90,19 +109,19 @@
       </div>
     </div>
 
-  <div class="row">
-    <div class="col-md-12">
-    <div class="card">
-      <div class="card-body">
-          <a href="#" class="btn btn-primary float-left">X</a>
-          <img src="../views/assests/images/profile_pic.jpeg" class="img-thumbnail float-left">
-          <p class="lead">
-            <a href="#"><strong>CHUYLOOPS</strong></a> submitted 'Profile Pic' to their gallery!
-          </p>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <a href="#" class="btn btn-primary float-left">X</a>
+              <img src="../views/assests/images/profile_pic.jpeg" class="img-thumbnail float-left">
+              <p class="lead">
+                <a href="#"><strong>CHUYLOOPS</strong></a> submitted 'Profile Pic' to their gallery!
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
   
   <div class="row">
     <div class="col-md-12">
@@ -115,9 +134,7 @@
    </div>
   </div>
 </div>
-<!-- ideally, these all have an x-button to delete notifications
-    - a 'CLEAR' button at the bottom below notifications to delete all displayed alerts
-    - when notifs are cleared, show message "No New messages" -->
+
 </div>
 </div>
 
@@ -125,11 +142,15 @@
     <div class="container">
       Copyright &copy; Jade Space 2019
     </div>
-</footer>  
+  </footer>
 
-     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
