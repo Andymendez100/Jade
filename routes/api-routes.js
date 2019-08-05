@@ -7,9 +7,9 @@ const Busboy = require('busboy');
 const keys = require("../keys");
 //
 
-const BUCKET_NAME = 'jade-main-feed';
-const IAM_USER_KEY = 'AKIAJLJ3MSWY5TOG2OCA';
-const IAM_USER_SECRET = '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';
+const BUCKET_NAME = keys.amazon.bucket;
+const IAM_USER_KEY = keys.amazon.id;
+const IAM_USER_SECRET = keys.amazon.secret;
 
 // const s3 = new AWS.S3({
 //   accessKeyId: keys.amazon.id,
@@ -60,19 +60,6 @@ module.exports = app => {
     busboy.on('finish', function () {
       console.log('Upload finished');
 
-      // Your files are stored in req.files. In this case,
-      // you only have one and it's req.files.element2:
-      // This returns:
-      // {
-      //    element2: {
-      //      data: ...contents of the file...,
-      //      name: 'Example.jpg',
-      //      encoding: '7bit',
-      //      mimetype: 'image/png',
-      //      truncated: false,
-      //      size: 959480
-      //    }
-      // }
 
       // Grabs your file object from the request.
       console.log(req.files);
