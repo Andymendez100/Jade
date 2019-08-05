@@ -4,17 +4,16 @@ const passport = require("../config/passport");
 const AWS = require('aws-sdk');
 const Busboy = require('busboy');
 // require("../dotenv").config();
-const keys = require("../keys");
+const keys = require("../config/keys");
 //
 
-const BUCKET_NAME = keys.amazon.bucket;
-const IAM_USER_KEY = keys.amazon.id;
-const IAM_USER_SECRET = keys.amazon.secret;
+const BUCKET_NAME = keys.bucket;
+const IAM_USER_KEY = keys.id;
+const IAM_USER_SECRET = keys.secret;
 
-// const s3 = new AWS.S3({
-//   accessKeyId: keys.amazon.id,
-//   secretAccessKey: keys.amazon.secret
-// });
+console.log(keys);
+
+
 
 function uploadToS3(file) {
   let s3bucket = new AWS.S3({
@@ -61,9 +60,7 @@ module.exports = app => {
       console.log('Upload finished');
 
 
-      // Grabs your file object from the request.
-      console.log(req.files);
-      console.log(req);
+      // Grabs your file object from the request
 
       const file = req.files.element2;
       console.log(file);
