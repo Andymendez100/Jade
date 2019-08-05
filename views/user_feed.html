@@ -90,10 +90,9 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <form>
-              Upload a picture:<input type="file" name="myFile" id="fileInput" accept="audio/*,video/*,image/*"><br>
-              Add a comment:<input type="text" id="commentInput"><br>
-              <button type="submit" id="fileSubmit" class="btn btn-default">Submit</button>
+            <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
+              <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
+              <button type="submit" id="image-upload" class="sinsup-button">Upload Image</button>
             </form>
           </div>
         </div>
