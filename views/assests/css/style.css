@@ -3,7 +3,7 @@ html {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	background:  #368136ec;
+	background: rgb(127, 202, 165, 0.5);
 /* background: #60a3bc !important; */
 }
 
@@ -12,7 +12,7 @@ html {
 	width: 350px;
 	margin-top: auto;
 	margin-bottom: auto;
-	background: #8bb850ec;
+	background: rgb(127, 202, 165);
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -22,7 +22,7 @@ html {
 	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 5px;
-	border-color: rgb(42, 146, 106);
+
 }
 
 .brand_logo_container {
@@ -31,7 +31,7 @@ html {
 	width: 170px;
 	top: -75px;
 	border-radius: 50%;
-	background: #8bb850ec;
+	background: rgb(127, 202, 165);
 	padding: 10px;
 	text-align: center;
 }
@@ -40,7 +40,7 @@ html {
 	height: 150px;
 	width: 150px;
 	border-radius: 50%;
-	border: 2px solid rgb(105, 180, 82);
+	border: 2px solid rgb(127, 202, 165)
 }
 
 		.form_container {
@@ -49,7 +49,7 @@ html {
 
 .login_btn {
 	width: 100%;
-	background: #468016 !important;
+	background: #26a69a !important;
 	color: rgb(255, 255, 255) !important;
 }
 
@@ -61,7 +61,7 @@ html {
 	padding: 0 2rem;
 }
 .input-group-text {
-	background: #468016 !important;
+	background: #26a69a !important;
 	color: white !important;
 	border: 0 !important;
 	border-radius: 0.25rem 0 0 0.25rem !important;
@@ -76,3 +76,14 @@ html {
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
 	background-color: #c0392b !important;
 }
+
+footer {
+	position: fixed;
+	bottom: 0; 
+	width: 100%;
+	background-color:rgb(54, 150, 102);
+	color:white;
+	justify-content: center;
+	text-align: center;
+	padding: 15px; 
+  }
