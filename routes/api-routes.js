@@ -1,8 +1,77 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const AWS = require('aws-sdk');
+const Busboy = require('busboy');
+// require("../dotenv").config();
+const keys = require("../config/keys");
 //
+
+const BUCKET_NAME = keys.bucket;
+const IAM_USER_KEY = keys.id;
+const IAM_USER_SECRET = keys.secret;
+
+console.log(keys);
+
+
+
+function uploadToS3(file) {
+  let s3bucket = new AWS.S3({
+    accessKeyId: IAM_USER_KEY,
+    secretAccessKey: IAM_USER_SECRET,
+    Bucket: BUCKET_NAME
+  });
+  s3bucket.createBucket(function () {
+    var params = {
+      Bucket: BUCKET_NAME,
+      Key: file.name,
+      Body: file.data
+    };
+    s3bucket.upload(params, function (err, data) {
+      if (err) {
+        console.log('error in callback');
+        console.log(err);
+      }
+      console.log('success');
+      console.log(data);
+    });
+  });
+}
+
 module.exports = app => {
+
+  // The following is an example of making file upload with additional body
+  // parameters.
+  // To make a call with PostMan
+  // Don't put any headers (content-type)
+  // Under body:
+  // check form-data
+  // Put the body with "element1": "test", "element2": image file
+
+  app.post('/api/upload', function (req, res, next) {
+    // This grabs the additional parameters so in this case passing in
+    // "element1" with a value.
+    const element1 = req.body.element1;
+
+    var busboy = new Busboy({ headers: req.headers });
+
+    // The file upload has completed
+    busboy.on('finish', function () {
+      console.log('Upload finished');
+
+
+      // Grabs your file object from the request
+
+      const file = req.files.element2;
+      console.log(file);
+
+      // Begins the upload to the AWS S3
+      uploadToS3(file);
+    });
+
+    req.pipe(busboy);
+  });
+
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -71,7 +140,7 @@ module.exports = app => {
   app.get(
     "/auth/google/callback",
     passport.authenticate("google", { failureRedirect: "/login" }),
-    function(req, res) {
+    function (req, res) {
       res.redirect("/");
     }
   );
