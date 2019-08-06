@@ -171,32 +171,20 @@ module.exports = app => {
       failureRedirect: "/login"
     })
   );
-
+  // This gets all the items from saved in s3 buckets
   app.get("/api/userfeed", (req, res) => {
+    var urlLinks = [];
+
     var params = { Bucket: BUCKET_NAME };
     s3.listObjects(params, function (err, data) {
       var bucketContents = data.Contents;
       for (var i = 0; i < bucketContents.length; i++) {
         var urlParams = { Bucket: BUCKET_NAME, Key: bucketContents[i].Key };
-        s3.getSignedUrl('getObject', urlParams, function (err, url) {
-          console.log('the url of the image is', url);
-
-          res.send(url)
-        });
+        var url = s3.getSignedUrl('getObject', urlParams);
+        urlLinks.push(url)
       }
+      res.send(urlLinks)
     });
 
-    // var params = { Bucket: BUCKET_NAME };
-    // s3.listObjects(params, function (err, data) {
-    //   if (err) console.log(err, err.stack); // an error occurred
-    //   else {
-    //     console.log(data.Contents[0].Key);
-    //     //console.log(data);
-    //     let key = data.Contents[0].Key;
-    //     var params = { Bucket: 'aws-demo-ta', Key: key };
-    //     var url = s3.getSignedUrl('getObject', params);
-    //     console.log('The URL is', url);
-    //   }
-    // });
   })
 };
