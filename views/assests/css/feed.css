@@ -39,6 +39,11 @@ body {
   margin-left: 5em;
 }
 
+/* container row for dynamically generated cards of user content */
+#notifs {
+  justify-content: space-evenly;
+}
+
 #feed-body {
   height: 100px;
 }
