@@ -15,12 +15,12 @@ It is built on node.js for the backend and jquery on the front end.
 
 Viewers will first see the JADE_SPACE home page, an introduction to what the application can offer.
 
-[image here]
+[image 1]
 
 Viewers are prompted to sign-up or login.
 
-[image 1]
-[image 2]
+![](views/assests/images/JS_signUpPage.png)
+![](views/assests/images/JS_loginPage.png)
 
 Upon creating account details, users now have access to the 'Feed' page.
 
