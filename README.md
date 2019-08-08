@@ -11,7 +11,7 @@ It is built on node.js for the backend and jquery on the front end.
 
 * (DEV Dependency) nodemon
 
-# Pages
+## Pages
 
 Viewers will first see the JADE_SPACE home page, an introduction to what the application can offer.
 
