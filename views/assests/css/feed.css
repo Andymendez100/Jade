@@ -15,8 +15,8 @@ body {
   margin-top: 3em;
 }
 
-.img-thumbnail.float-left {
- margin-left: 50px;
+.img-thumbnail {
+ margin-left: 10px;
  height: 150px;
  width: 150px;
 }
