@@ -6,7 +6,7 @@ const passport = require("./config/passport");
 //passport for facebook/twitter/google
 
 require('dotenv').config()
-const facebook = require("./config/passport-facebook")
+
 const busboy = require('connect-busboy');
 const busboyBodyParser = require('busboy-body-parser');
 // const twitter = require ("./config/passport-twitter")

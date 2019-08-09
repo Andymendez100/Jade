@@ -15,7 +15,7 @@ let s3 = new AWS.S3({
   accessKeyId: IAM_USER_KEY,
 
   secretAccessKey: IAM_USER_SECRET,
- Bucket: BUCKET_NAME
+  Bucket: BUCKET_NAME
 });
 
 
@@ -70,7 +70,17 @@ module.exports = app => {
 
       // Begins the upload to the AWS S3
       uploadToS3(file);
+      var urlParams = { Bucket: BUCKET_NAME, Key: file.name }
+      var url = s3.getSignedUrl('getObject', urlParams);
+      console.log(url);
+
+      db.Feed.create({
+        postImage: url,
+        UserId: 1
+      })
+
     });
+
 
     // upload to database
 
@@ -85,7 +95,7 @@ module.exports = app => {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
-    res.json("/members");
+    res.send("/members");
   });
   //
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
