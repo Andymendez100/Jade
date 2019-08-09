@@ -11,10 +11,6 @@ $(document).ready(() => {
       password: passwordInput.val().trim()
     };
 
-<<<<<<< HEAD
-    if (!userData.email || !userData.password) {
-      return;
-=======
     // When the signup button is clicked, we validate the email and password are not blank
     signUpForm.on("click", function (event) {
         event.preventDefault();
@@ -39,10 +35,9 @@ $(document).ready(() => {
             email: email,
             password: password
         }).then(function (data) {
-            window.location.replace(data);
+            // window.location.replace(data);
             // If there's an error, handle it by throwing up a boostrap alert
         }).catch(handleLoginErr);
->>>>>>> 665c7265bc29d2676674c5d5fd776bb7efe09dc4
     }
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.email, userData.password);
@@ -58,7 +53,7 @@ $(document).ready(() => {
       password: password
     })
       .then(function(data) {
-        window.location.replace(data);
+        // window.location.replace(data);
         // If there's an error, handle it by throwing up a boostrap alert
       })
       .catch(handleLoginErr);
