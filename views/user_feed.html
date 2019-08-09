@@ -73,9 +73,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
+
             <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
+              <input type="text" placeholder="Write something here.." name=userContent>
+              <input type="number" placeholder="Inset price here..." name=userNumber>
               <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
-              <button type="submit" id="image-upload" class="sinsup-button">Upload Image</button>
+              <button type="submit" id="image-upload" class="signup-button">Upload Post</button>
             </form>
           </div>
         </div>
@@ -110,9 +113,6 @@
         </div>
       </div>
 
-      <div id="buffer">
-        <!-- Presumable area for buffer element -->
-      </div>
 
       <div class="row" id="notifs">
 

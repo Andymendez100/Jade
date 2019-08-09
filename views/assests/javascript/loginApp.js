@@ -29,7 +29,7 @@ $(document).ready(() => {
             email: email,
             password: password
         }).then((data) => {
-            localStorage.setItem("userEmail",email)
+            console.log(data);
             window.location.replace(data);
             // If there's an error, log the error
         }).catch((err) => {
