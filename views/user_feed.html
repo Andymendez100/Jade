@@ -74,12 +74,13 @@
         <div class="row">
           <div class="col-md-3">
             <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-bottom:1rem;">Upload Art</button>
-      
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
+              style="margin-bottom:1rem;">Upload Art</button>
+
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
               <div class="modal-dialog">
-      
+
                 <!-- Modal content-->
                 <div class="modal-content">
                   <div class="modal-header">
@@ -89,8 +90,12 @@
                   <div class="modal-body">
                     <p>
                       <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
+                        <input type="text" placeholder="Write something here.." name=userContent>
+                        <!-- <input type="number" placeholder="Inset price here..." name=userNumber> -->
+                        <input type="number" name="userNumber" min="0" step=".01" placeholder="Insert price here...">
                         <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
-                        <button type="submit" id="image-upload" class="sinsup-button">Upload Image</button>
+                        <input type="hidden" id="userId" name="userId" value="">
+                        <button type="submit" id="image-upload" class="signup-button">Upload Post</button>
                       </form>
                     </p>
                   </div>
@@ -98,7 +103,7 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
                   </div>
                 </div>
-      
+
               </div>
             </div>
           </div>
@@ -140,7 +145,7 @@
       </div>
 
       <div class="row" id="notifs">
-            <!-- <div class="x-button">
+        <!-- <div class="x-button">
             <button type="button" class="btn btn-primary float-left">X</button></div> -->
 
         <!-- <div class="card" style="width: 18rem;">
@@ -152,8 +157,6 @@
             </p>
           </div>
         </div>
-
-
         <div class="card" style="width: 18rem;">
           <div class="card-body">
             <img src="../views/assests/images/profile_pic.jpeg" class="img-thumbnail">
@@ -162,7 +165,6 @@
             </p>
           </div>
         </div>
-
         <div class="card" style="width: 18rem;">
           <div class="card-body">
             <img src="../views/assests/images/art.jpg" class="img-thumbnail">
@@ -172,10 +174,10 @@
           </div>
         </div> -->
 
-<!-- Don't hide these divs. -->
+        <!-- Don't hide these divs. -->
       </div>
     </div>
-<!-- =========================== -->
+    <!-- =========================== -->
 
     <!-- <div class="row">
         <div class="col-md-12">
@@ -189,7 +191,7 @@
         </div>
       </div>-->
 
-<!-- Don't hide the lower two divs. -->
+    <!-- Don't hide the lower two divs. -->
   </div>
   </div>
 

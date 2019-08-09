@@ -6,7 +6,6 @@ $(document).ready(() => {
 
     // When the form is submitted, we validate there's an email and password entered
     loginForm.on("click", (event) => {
-        console.log("Asdawd");
         event.preventDefault();
         var userData = {
             email: emailInput.val().trim(),
@@ -29,8 +28,9 @@ $(document).ready(() => {
             email: email,
             password: password
         }).then((data) => {
-            localStorage.setItem("userEmail",email)
-            window.location.replace(data);
+            // console.log(data);
+            sessionStorage.setItem("id", data)
+            window.location.replace("/members");
             // If there's an error, log the error
         }).catch((err) => {
             if (err.status === 401) {
