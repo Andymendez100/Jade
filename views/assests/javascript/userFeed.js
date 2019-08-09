@@ -19,7 +19,7 @@ $(document).ready(function () {
       console.log(data[i].postImage);
 
       $("#notifs").prepend(
-        $('<div class="card" style = "width:18rem;"> <div class="card-body"> <img src="' + data[i].postImage + '" class="img-thumbnail float-left"> <p class="lead" style="clear: both;">' + Content + " \n Asking Price" + price + '"</p></div></div>')
+        $('<div class="card" style = "width:18rem;"> <div class="card-body"> <img src="' + data[i].postImage + '" class="img-thumbnail float-left"> <p class="lead" style="clear: both;">' + Content + " \n Asking Price \n" + price + '"</p></div></div>')
 
       )
     }
