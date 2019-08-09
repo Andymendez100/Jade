@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+​
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  ​
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./assests/css/feed.css">
   <title>JADE_Feed</title>
 </head>
+​
 
 <body>
   <!-- Page content -->
@@ -20,7 +22,7 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    ​
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -42,14 +44,14 @@
           </div>
         </li>
       </ul>
-
+      ​
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
-
+  ​
   <!-- Underneath Jade Space header will have:
     1. Thumbnail user avatar
     2. Words "My Feed" (or other) within block
@@ -60,8 +62,8 @@
       <div class="col-md-3" id="userInput">
         <img src="../views/assests/images/placeholder_thumb.png" id="user-av-thumb" class="rounded"></img>
       </div>
-
-
+      ​
+      ​
       <div class="col-md-6" id="feed-banner">
         <div class="card" id="cardBox">
           <div class="card-body" style="margin-top: 10px;">
@@ -76,22 +78,22 @@
             <!-- Trigger the modal with a button -->
             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
               style="margin-bottom:1rem;">Upload Art</button>
-
+            ​
             <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
               <div class="modal-dialog">
-
+                ​
                 <!-- Modal content-->
-                <div class="modal-content">
+                <!-- <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <!-- <h4 class="modal-title">Upload Window</h4> -->
+                    <h4 class="modal-title">Upload Window</h4>
                   </div>
                   <div class="modal-body">
                     <p>
                       <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
                         <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
-                        <button type="submit" id="image-upload" class="sinsup-button">Upload Image</button>
+                        <button type="submit" id="image-upload" class="signup-button">Upload Image</button>
                       </form>
                     </p>
                   </div>
@@ -99,25 +101,29 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
                   </div>
                 </div>
-
+                ​ -->
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
+      <img src="https://jade-main-feed.s3-us-west-1.amazonaws.com/979-1499x1000.jpg">
+      ​
+      ​
     </div> <!-- to close Row for avatar and My Feed -->
-
+    ​
     <div class="col-md-4">
-      <input type="text" placeholder="Write something here.." name=userContent>
-      <input type="number" placeholder="Inset price here..." name=userNumber>
+      ​
       <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
+        <input type="text" placeholder="Write something here.." name=userContent>
+        <input type="number" placeholder="Inset price here..." name=userNumber>
         <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
+        <input type="hidden" id="userId" name="userId" value="">
         <button type="submit" id="image-upload" class="signup-button">Upload Post</button>
       </form>
+      ​
 
-
+      ​
       <div id="feed-body">
         <div class="row" id="clearButton">
           <p><a href="#" class="btn btn-primary float-left">Clear All</a></p>
@@ -125,7 +131,7 @@
         <!-- ideally, these all have an x-button to delete notifications
     - a 'CLEAR' button at the bottom below notifications to delete all displayed alerts
     - when notifs are cleared, show message "No New messages" -->
-
+        ​
         <div class="row" id="welcome">
           <div class="col-md-12">
             <div class="card">
@@ -143,11 +149,11 @@
             </div>
           </div>
         </div>
-
-
+        ​
+        ​
         <div class="row" id="notifs">
-
-          <div class="card" style="width: 18rem;">
+          ​
+          <!-- <div class="card" style="width: 18rem;">
             <div class="card-body">
               <div class="x-button">
                 <button type="button" class="btn btn-primary float-left">X</button></div>
@@ -158,8 +164,8 @@
               </p>
             </div>
           </div>
-
-
+          ​
+          ​
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <button type="button" class="btn btn-primary float-left">X</button>
@@ -169,7 +175,7 @@
               </p>
             </div>
           </div>
-
+          ​
           <div class="card" style="width: 18rem;">
             <div class="card-body">
               <button type="button" class="btn btn-primary float-left">X</button>
@@ -179,11 +185,11 @@
               </p>
             </div>
           </div>
-
+          ​
         </div>
       </div>
-
-      <!-- <div class="row">
+      ​ -->
+          <!-- <div class="row">
         <div class="col-md-12">
           <div class="card">
             <div class="card-body">
@@ -194,22 +200,23 @@
           </div>
         </div>
       </div>-->
-
-    </div>
-  </div>
-
-  <footer>
-    <div class="container">
-      Copyright &copy; Jade Space 2019
-    </div>
-  </footer>
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="./assests/javascript/userFeed.js"></script>
+          ​
+        </div>
+      </div>
+      ​
+      <footer>
+        <div class="container">
+          Copyright &copy; Jade Space 2019
+        </div>
+      </footer>
+      ​
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+      <script src="./assests/javascript/userFeed.js"></script>
 </body>
+​
 
 </html>
