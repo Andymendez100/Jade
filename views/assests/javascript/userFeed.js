@@ -2,8 +2,10 @@ $(document).ready(function () {
 
     //Create function for event that clears all card notifications when the 'clear' button is clicked
     $("#clearButton").on("click", function() {
-       // alert("I've been clicked!"); 
-        $("welcome", "notifs").empty();
+    //    alert("I've been clicked!"); 
+      $("#notifs").empty();
+      $("#welcome").empty();
+      
     });
 
     //Create event that when the "X" buttons are clicked on a card, they dismiss that single card.
