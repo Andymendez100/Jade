@@ -15,6 +15,11 @@ body {
   margin-top: 3em;
 }
 
+.modal-header .close {
+  margin: 0;
+}
+
+
 .img-thumbnail {
  margin-left: 10px;
  margin-bottom: 10px;

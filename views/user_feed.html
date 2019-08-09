@@ -72,11 +72,35 @@
       <!-- User input to put pictures and write a post-->
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
-              <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
-              <button type="submit" id="image-upload" class="sinsup-button">Upload Image</button>
-            </form>
+          <div class="col-md-3">
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-bottom:1rem;">Upload Art</button>
+      
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+      
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!-- <h4 class="modal-title">Upload Window</h4> -->
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
+                        <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
+                        <button type="submit" id="image-upload" class="sinsup-button">Upload Image</button>
+                      </form>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
           </div>
         </div>
       </div>
