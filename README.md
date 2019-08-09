@@ -24,4 +24,4 @@ Viewers are prompted to sign-up or login.
 
 Upon creating account details, users now have access to the 'Feed' page.
 
-[image 3]
+![](views/assests/images/JS_userFeed.png)
