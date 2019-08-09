@@ -1,5 +1,21 @@
 $(document).ready(function () {
 
+    //Create function for event that clears all card notifications when the 'clear' button is clicked
+    $("#clearButton").on("click", function() {
+    //    alert("I've been clicked!"); 
+      $("#notifs").empty();
+      $("#welcome").empty();
+      // After notifications are cleared, text will display on the feed "No new messages! Perhaps you should submit something to liven things up?""
+      
+    });
+
+    //Create event that when the "X" buttons are clicked on a card, they dismiss that single card.
+      // If I don't figure this out by the end of Thursday- scrub this. - EMMA
+    //   $("#button").on("click", function() {
+    //     alert("I've been clicked!");
+    //     // $("").empty();
+    // });
+
     // Make a get request to the api holding our links and dynamically creating cards for the feed
     const getUserFeed = () => {
         $.get("/api/userFeed").then((data) => {
@@ -27,4 +43,4 @@ $(document).ready(function () {
     // })
 
     getUserFeed();
-})
+ })

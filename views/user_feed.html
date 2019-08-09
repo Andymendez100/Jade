@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./assests/css/feed.css">
-  <title>Jade User Feed</title>
+  <title>JADE_Feed</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/"><strong>JS Jade Space</strong><span class="sr-only"></span></a>
+          <a class="nav-link" href="/"><strong>JS JADE_SPACE</strong><span class="sr-only"></span></a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -72,13 +72,36 @@
       <!-- User input to put pictures and write a post-->
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <input type="text" placeholder="Write something here.." name=userContent >
-            <input type="number" placeholder="Inset price here..." name=userNumber>
-            <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
-              <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
-              <button type="submit" id="image-upload" class="signup-button">Upload Post</button>
-            </form>
+          <div class="col-md-3">
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
+              style="margin-bottom:1rem;">Upload Art</button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!-- <h4 class="modal-title">Upload Window</h4> -->
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
+                        <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
+                        <button type="submit" id="image-upload" class="sinsup-button">Upload Image</button>
+                      </form>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -86,70 +109,81 @@
 
     </div> <!-- to close Row for avatar and My Feed -->
 
+    <div class="col-md-4">
+      <input type="text" placeholder="Write something here.." name=userContent>
+      <input type="number" placeholder="Inset price here..." name=userNumber>
+      <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
+        <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
+        <button type="submit" id="image-upload" class="signup-button">Upload Post</button>
+      </form>
 
 
-    <div id="feed-body">
-      <div class="row" id="clearButton">
-        <p><a href="#" class="btn btn-primary float-left">Clear All</a></p>
-      </div>
-      <!-- ideally, these all have an x-button to delete notifications
+      <div id="feed-body">
+        <div class="row" id="clearButton">
+          <p><a href="#" class="btn btn-primary float-left">Clear All</a></p>
+        </div>
+        <!-- ideally, these all have an x-button to delete notifications
     - a 'CLEAR' button at the bottom below notifications to delete all displayed alerts
     - when notifs are cleared, show message "No New messages" -->
 
-      <div class="row" id="welcome">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-body">
-              <a href="#" class="btn btn-primary float-left">X</a>
-              <h1>🎊</h1>
-              <p class="lead"><strong>Congratulations on joining JadeSpace! We are happy to welcome you to our community
-                  of
-                  artists.
-                  <br>Find artists to follow, make friends, or just browse art to your heart's delight.</strong>
-              </p>
+        <div class="row" id="welcome">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="x-button">
+                  <button type="button" class="btn btn-primary float-left">X</button></div>
+                <h1>🎊</h1>
+                <p class="lead"><strong>Congratulations on joining JadeSpace! We are happy to welcome you to our
+                    community
+                    of
+                    artists.
+                    <br>Find artists to follow, make friends, or just browse art to your heart's delight.</strong>
+                </p>
+              </div>
             </div>
           </div>
         </div>
+
+
+        <div class="row" id="notifs">
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <div class="x-button">
+                <button type="button" class="btn btn-primary float-left">X</button></div>
+              <img src="../views/assests/images/emma_selfportrait.jpg" class="img-thumbnail float-left" alt="...">
+              <p class="lead" style="clear: both;">
+                Some quick example text to build on the card title and make up the bulk of the card's
+                content.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <button type="button" class="btn btn-primary float-left">X</button>
+              <img src="../views/assests/images/profile_pic.jpeg" class="img-thumbnail float-left">
+              <p class="lead" style="clear: both;">
+                <a href="#"><strong>CHUYLOOPS</strong></a> submitted 'Profile Pic' to their gallery!
+              </p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <button type="button" class="btn btn-primary float-left">X</button>
+              <img src="../views/assests/images/art.jpg" class="img-thumbnail float-left">
+              <p class="lead" style="clear: both;">
+                <a href="#"><strong>CHUYLOOPS</strong></a> submitted 'Son Goku' to their gallery!
+              </p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-
-      <div class="row" id="notifs">
-
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <a href="#" class="btn btn-primary float-left">X</a>
-            <img src="..." class="card-img-top" alt="...">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.
-            </p>
-          </div>
-        </div>
-
-
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <a href="#" class="btn btn-primary float-left">X</a>
-            <img src="../views/assests/images/profile_pic.jpeg" class="img-thumbnail float-left">
-            <p class="lead">
-              <a href="#"><strong>CHUYLOOPS</strong></a> submitted 'Profile Pic' to their gallery!
-            </p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <a href="#" class="btn btn-primary float-left">X</a>
-            <img src="../views/assests/images/profile_pic.jpeg" class="img-thumbnail float-left">
-            <p class="lead">
-              <a href="#"><strong>CHUYLOOPS</strong></a> submitted 'Profile Pic' to their gallery!
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- <div class="row">
+      <!-- <div class="row">
         <div class="col-md-12">
           <div class="card">
             <div class="card-body">
@@ -161,7 +195,7 @@
         </div>
       </div>-->
 
-  </div>
+    </div>
   </div>
 
   <footer>

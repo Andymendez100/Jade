@@ -84,7 +84,7 @@ input[type="submit"]:focus {
     background-position: center;
 }
 
-.or {
+/* .or {
     position: absolute;
     top: 180px;
     left: 280px;
@@ -94,7 +94,7 @@ input[type="submit"]:focus {
     box-shadow: 0 2px 4px rgba(0, 0. 0, 0.6);
     line-height: 40px;
     text-align: center;
-}
+} */
 
 .right-box .signinwith {
     display: block;
