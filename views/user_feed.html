@@ -73,10 +73,9 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-
+            <input type="text" placeholder="Write something here.." name=userContent >
+            <input type="number" placeholder="Inset price here..." name=userNumber>
             <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
-              <input type="text" placeholder="Write something here.." name=userContent>
-              <input type="number" placeholder="Inset price here..." name=userNumber>
               <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
               <button type="submit" id="image-upload" class="signup-button">Upload Post</button>
             </form>

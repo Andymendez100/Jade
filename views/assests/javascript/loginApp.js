@@ -30,6 +30,12 @@ $(document).ready(() => {
             password: password
         }).then((data) => {
             console.log(data);
+            var userName = data.email;
+            var char = userName.indexOf("@");
+            var folderName = userName.slice(0,char);
+            // folderName = folderName + "_" + data.id
+            console.log(folderName);
+            sessionStorage.setItem("imgFolderName'",folderName + "/" + data.id)
             window.location.replace(data);
             // If there's an error, log the error
         }).catch((err) => {

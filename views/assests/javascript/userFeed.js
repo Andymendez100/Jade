@@ -12,5 +12,19 @@ $(document).ready(function () {
         })
     }
 
+    // $("#image-upload").click(function(e){
+    //     e.preventDefault();
+    //     $.ajax({
+    //         method: "POST",
+    //         data: {
+    //             userEmail: sessionStorage.getItem('imgFolderName');
+    //             imageID: 
+
+    //         },
+    //         url: "/api/uploads"
+    //     }
+    //     )
+    // })
+
     getUserFeed();
 })

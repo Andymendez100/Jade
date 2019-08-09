@@ -52,7 +52,6 @@ function uploadToS3(file) {
 module.exports = app => {
 
   app.post('/api/upload', function (req, res, next) {
-     var urlLinks = [];
     // This grabs the additional parameters so in this case passing in
     // "element1" with a value.
     const element1 = req.body.element1;
@@ -69,28 +68,9 @@ module.exports = app => {
       const file = req.files.element2;
       console.log(file);
 
-      var urlParams = { Bucket: BUCKET_NAME, Key: file.name };
-        var url = s3.getSignedUrl('getObject', urlParams);
-        
-        urlLinks.push(url)
       // Begins the upload to the AWS S3
       uploadToS3(file);
-      res.send(urlLinks)
     });
-
-    
-
-    // var params = { Bucket: BUCKET_NAME };
-    // s3.listObjects(params, function (err, data) {
-    //   var bucketContents = data.Contents;
-    //   //for (var i = 0; i < bucketContents.length; i++) {
-        
-      //}
-     
-    // });
-
-
-    
 
     // upload to database
 
@@ -117,22 +97,7 @@ module.exports = app => {
       email: req.body.email,
       password: req.body.password
     })
-      .then((data) => {
-        console.log(data.email);
-        var userName = data.email;
-        var char = userName.indexOf("@");
-        console.log(char);
-        
-
-        
-        
-        var params = { 
-          Bucket: "jade-main-feed", 
-          Key: "exampleob"
-         }
-        
-        // console.log(data.id);
-        
+      .then(() => {
         res.redirect(307, "/api/login");
       })
       .catch(err => {
@@ -140,8 +105,6 @@ module.exports = app => {
         res.json(err);
       });
   });
-
-
   //
   // Route for logging user out
   app.get("/logout", (req, res) => {
@@ -223,18 +186,18 @@ module.exports = app => {
   );
   // This gets all the items from saved in s3 buckets
   app.get("/api/userfeed", (req, res) => {
-    // var urlLinks = [];
+    var urlLinks = [];
 
-    // var params = { Bucket: BUCKET_NAME };
-    // s3.listObjects(params, function (err, data) {
-    //   var bucketContents = data.Contents;
-    //   for (var i = 0; i < bucketContents.length; i++) {
-    //     var urlParams = { Bucket: BUCKET_NAME, Key: bucketContents[i].Key };
-    //     var url = s3.getSignedUrl('getObject', urlParams);
-    //     urlLinks.push(url)
-    //   }
-    //   res.send(urlLinks)
-    // });
+    var params = { Bucket: BUCKET_NAME };
+    s3.listObjects(params, function (err, data) {
+      var bucketContents = data.Contents;
+      for (var i = 0; i < bucketContents.length; i++) {
+        var urlParams = { Bucket: BUCKET_NAME, Key: bucketContents[i].Key };
+        var url = s3.getSignedUrl('getObject', urlParams);
+        urlLinks.push(url)
+      }
+      res.send(urlLinks)
+    });
 
   })
 
