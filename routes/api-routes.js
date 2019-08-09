@@ -3,7 +3,6 @@ const db = require("../models");
 const passport = require("../config/passport");
 const AWS = require('aws-sdk');
 const Busboy = require('busboy');
-// require("../dotenv").config();
 const keys = require("../config/keys");
 //
 
@@ -11,9 +10,11 @@ const BUCKET_NAME = keys.bucket;
 const IAM_USER_KEY = keys.id;
 const IAM_USER_SECRET = keys.secret;
 
-console.log(keys);
-
-
+let s3 = new AWS.S3({
+  accessKeyId: IAM_USER_KEY,
+  secretAccessKey: IAM_USER_SECRET,
+  Bucket: BUCKET_NAME
+});
 
 function uploadToS3(file) {
   let s3bucket = new AWS.S3({
@@ -39,14 +40,6 @@ function uploadToS3(file) {
 }
 
 module.exports = app => {
-
-  // The following is an example of making file upload with additional body
-  // parameters.
-  // To make a call with PostMan
-  // Don't put any headers (content-type)
-  // Under body:
-  // check form-data
-  // Put the body with "element1": "test", "element2": image file
 
   app.post('/api/upload', function (req, res, next) {
     // This grabs the additional parameters so in this case passing in
@@ -178,4 +171,20 @@ module.exports = app => {
       failureRedirect: "/login"
     })
   );
+  // This gets all the items from saved in s3 buckets
+  app.get("/api/userfeed", (req, res) => {
+    var urlLinks = [];
+
+    var params = { Bucket: BUCKET_NAME };
+    s3.listObjects(params, function (err, data) {
+      var bucketContents = data.Contents;
+      for (var i = 0; i < bucketContents.length; i++) {
+        var urlParams = { Bucket: BUCKET_NAME, Key: bucketContents[i].Key };
+        var url = s3.getSignedUrl('getObject', urlParams);
+        urlLinks.push(url)
+      }
+      res.send(urlLinks)
+    });
+
+  })
 };

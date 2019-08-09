@@ -29,12 +29,12 @@ $(document).ready(() => {
             email: email,
             password: password
         }).then((data) => {
-
+            localStorage.setItem("userEmail",email)
             window.location.replace(data);
             // If there's an error, log the error
         }).catch((err) => {
             if (err.status === 401) {
-                alert("test");
+                alert("Incorrect email or password");
 
 
             }
