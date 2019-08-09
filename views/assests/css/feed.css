@@ -19,9 +19,8 @@ body {
   margin: 0;
 }
 
-
 .img-thumbnail {
- margin-left: 10px;
+ margin: auto;
  margin-bottom: 10px;
  height: 150px;
  width: 150px;
