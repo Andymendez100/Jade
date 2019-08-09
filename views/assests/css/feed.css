@@ -15,8 +15,14 @@ body {
   margin-top: 3em;
 }
 
-.img-thumbnail.float-left {
- margin-left: 50px;
+.modal-header .close {
+  margin: 0;
+}
+
+
+.img-thumbnail {
+ margin-left: 10px;
+ margin-bottom: 10px;
  height: 150px;
  width: 150px;
 }
@@ -41,7 +47,7 @@ body {
 
 /* container row for dynamically generated cards of user content */
 #notifs {
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 #feed-body {

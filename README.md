@@ -11,17 +11,17 @@ It is built on node.js for the backend and jquery on the front end.
 
 * (DEV Dependency) nodemon
 
-# Pages
+## Pages
 
 Viewers will first see the JADE_SPACE home page, an introduction to what the application can offer.
 
-[image here]
+![](views/assests/images/JS_main)
 
 Viewers are prompted to sign-up or login.
 
-[image 1]
-[image 2]
+![](views/assests/images/JS_signUpPage.png)
+![](views/assests/images/JS_loginPage.png)
 
-Upon creating account details, users now have access to the 'Feed' page.
+Upon creating account details, users now have access to the 'Feed' page. User will be able to receive notifications about the users they follow, and remove the "notifs" with the 'Clear All' button.
 
-[image 3]
+![](views/assests/images/JS_userFeed.png)
