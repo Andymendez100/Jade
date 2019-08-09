@@ -22,6 +22,6 @@ Viewers are prompted to sign-up or login.
 ![](views/assests/images/JS_signUpPage.png)
 ![](views/assests/images/JS_loginPage.png)
 
-Upon creating account details, users now have access to the 'Feed' page.
+Upon creating account details, users now have access to the 'Feed' page. User will be able to receive notifications about the users they follow, and remove the "notifs" with the 'Clear All' button.
 
 ![](views/assests/images/JS_userFeed.png)
