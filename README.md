@@ -15,7 +15,7 @@ It is built on node.js for the backend and jquery on the front end.
 
 Viewers will first see the JADE_SPACE home page, an introduction to what the application can offer.
 
-![](views/assests/images/JS_main)
+![](views/assests/images/JS_main.png)
 
 Viewers are prompted to sign-up or login.
 
