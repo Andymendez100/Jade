@@ -5,8 +5,7 @@ $(document).ready(() => {
     const passwordInput = $('#passwordInput')
 
     // When the form is submitted, we validate there's an email and password entered
-    loginForm.on("click", function (event) {
-        console.log("Asdawd");
+    loginForm.on("click", (event) => {
         event.preventDefault();
         var userData = {
             email: emailInput.val().trim(),
@@ -24,17 +23,18 @@ $(document).ready(() => {
     });
 
     // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
-    function loginUser(email, password) {
+    let loginUser = (email, password) => {
         $.post("/api/login", {
             email: email,
             password: password
-        }).then(function (data) {
-
-            window.location.replace(data);
+        }).then((data) => {
+            // console.log(data);
+            sessionStorage.setItem("id", data)
+            window.location.replace("/members");
             // If there's an error, log the error
-        }).catch(function (err) {
+        }).catch((err) => {
             if (err.status === 401) {
-                alert("test");
+                alert("Incorrect email or password");
 
 
             }
