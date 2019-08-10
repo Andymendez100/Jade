@@ -90,12 +90,25 @@
                   <div class="modal-body">
                     <p>
                       <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
-                        <input type="text" placeholder="Write something here.." name=userContent>
+                        <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2"  style="margin-bottom:1rem;" />
+                        <!-- <input type="text" placeholder="Write something here.." name=userContent> -->
+                        <div class="input-group" style="margin-bottom:1rem;">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Text</span>
+                          </div>
+                          <textarea class="form-control" aria-label="With textarea" placeholder="Write something here.."></textarea>
+                        </div>
                         <!-- <input type="number" placeholder="Inset price here..." name=userNumber> -->
-                        <input type="number" name="userNumber" min="0" step=".01" placeholder="Insert price here...">
-                        <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2" />
+                        <!-- <input type="number"  style="margin-bottom:1rem;" name="userNumber" min="0" step=".01" placeholder="Insert price here..."> -->
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                            <span class="input-group-text">0.00</span>
+                          </div>
+                          <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Insert price here...">
+                        </div>
                         <input type="hidden" id="userId" name="userId" value="">
-                        <button type="submit" id="image-upload" class="signup-button">Upload Post</button>
+                        <button type="submit" id="image-upload" class="btn btn-info">Upload Post</button>
                       </form>
                     </p>
                   </div>
@@ -174,6 +187,7 @@
           </div>
         </div> -->
 
+        
         <!-- Don't hide these divs. -->
       </div>
     </div>
