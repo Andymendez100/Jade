@@ -3,306 +3,344 @@
 <title>JADE_SPACE</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- linked css js and other surces -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="assests/css/main-page.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
-<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
-  <title>JADE_SPACE</title>
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-"
+ crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link ref="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+<title>JADE_SPACE</title>
 </head>
+ 
 <body>
-  <!-- Navbar (sit on top) -->
-
-  <nav class="navbar navbar-expand-lg bg-success text-uppercase fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">JADE SPACE</a>
-      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-success text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-dark" id="navbar">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+ 
+ <!-- Navbar with links reaching back to main page -->
+ 
+ <nav class="navbar navbar-expand-lg bg-success text-uppercase fixed-top" id="mainNav">
+   <div class="container">
+     <a class="navbar-brand js-scroll-trigger" href="#page-top">JADE SPACE</a>
+     <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-success text-white rounded"
+       type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+       aria-expanded="false" aria-label="Toggle navigation">
+       Menu
+       <i class="fas fa-bars"></i>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarResponsive">
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item mx-0 mx-lg-1">
+           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projects</a>
+         </li>
+         <li class="nav-item mx-0 mx-lg-1">
+           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+         </li>
+         <li class="nav-item mx-0 mx-lg-1">
+           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </nav>
+ 
+ <!-- header section -->
+ <header>
+   <div class="overlay"></div>
+   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+     <!-- <source src="assests/images/backgroundvideo.mp4" type="video/mp4"> -->
+   </video>
+   <div class="container h-100">
+     <div class="d-flex h-100 text-center align-items-center">
+       <div class="w-100 text-white">
+         <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>ARTISTS</b></span>
+           <span class="w3-hide-small w3-text-light-grey">UNITE</span></h1>
+         <p class="lead mb-0">where dreams come true</p>
+       </div>
+     </div>
+   </div>
+ </header>
+ 
+ <!-- Modals  for each pic to pop up -->
+ 
+ <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+   aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5>GOKU-USERNAME</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <img src="./assests/images/art.jpg" alt="ART" style="width: 100%">
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+ <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+   aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5>SKETCHES-USERNAME</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <img src="./assests/images/art2.jpg" alt="ART" style="width:100%">
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+ <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+   aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5>SKETCHES-USERNAME</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+           <img src="./assests/images/art3.jpg" alt="ART" style="width:100%">
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+ <!-- Page content -->
+ 
+ <div class="w3-content" style="max-width:1564px">
+ 
+   <!-- Project Section -->
+   <div class="w3-container w3-padding-32" id="projects">
+     <h3 class="w3-border-bottom w3-border-light-green w3-padding-16">JADESPACE PROJECTS</h3>
+   </div>
+ 
+   <!-- <div class="container"> -->
+ 
+   <div class="row">
+     <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
+       <div class="MultiCarousel-inner">
+         <div class="item">
+           <div class="pad15">
+             <div class="w3-display-container" data-toggle="modal" data-target="#exampleModalLong">
+               <div class="w3-display-topleft w3-black w3-padding">GOKU-USERNAME</div>
+               <img src="./assests/images/art.jpg" alt="ART" style="width: 100%">
+             </div>
+           </div>
+         </div>
+         <div class="item">
+           <div class="pad15">
+             <div class="w3-display-container" data-toggle="modal" data-target="#exampleModalLong1">
+               <div class="w3-display-topleft w3-black w3-padding">Sketches-USERNAME</div>
+               <img src="./assests/images/art2.jpg" alt="ART" style="width:100%">
+             </div>
+           </div>
+         </div>
+         <div class="item">
+           <div class="pad15">
+             <div class="w3-display-container">
+               <div class="w3-display-topleft w3-black w3-padding">ANIMATE-USERNAME </div>
+               <img src="./assests/images/emma_selfportrait.jpg" alt="ART" style="width:99%">
+             </div>
+           </div>
+         </div>
+         <div class="item">
+           <div class="pad15">
+             <div class="w3-display-container" data-toggle="modal" data-target="#exampleModalLong2">
+               <div class="w3-display-topleft w3-black w3-padding">PhotoShoot-USERNAME</div>
+               <img src="./assests/images/art3.jpg" alt="ART" style="width:100%">
+             </div>
+           </div>
+         </div>
+         <div class="item">
+           <div class="pad15">
+             <div class="w3-display-container">
+               <div class="w3-display-topleft w3-black w3-padding">InkArt-USERNAME</div>
+               <img src="./assests/images/profile_pic.jpeg" alt="ART" style="width:99%">
+             </div>
+           </div>
+         </div>
+         <div class="item">
+           <div class="pad15">
+             <div class="w3-display-container">
+               <div class="w3-display-topleft w3-black w3-padding">FanArt-USERNAME</div>
+               <img src="./assests/images/post_pic.jpeg" alt="ART" style="width:100%">
+             </div>
+           </div>
+         </div>
+         <div class="item">
+           <div class="pad15">
+             <div class="w3-display-container">
+               <div class="w3-display-topleft w3-black w3-padding">ArtWork-USERNAME</div>
+               <img src="./assests/images/grasshopper-graphic.png" alt="ART" style="width:99%">
+             </div>
+           </div>
+         </div>
+         <div class="item">
+           <div class="pad15">
+             <div class="w3-display-container">
+               <div class="w3-display-topleft w3-black w3-padding">ArtWork-USERNAME</div>
+               <img src="./assests/images/Michael-Carini-Arts.jpg" alt="ART" style="width:99%">
+             </div>
+           </div>
+         </div>
+       </div>
+       <button class="btn leftLst" id="next-btn">
+         <</button> <button class="btn rightLst" id="next-btn">>
+       </button>
+     </div>
+   </div>
+ 
+   <!-- About Section -->
+ 
+   <div class="w3-container w3-padding-32" id="about">
+     <h3 class="w3-border-bottom w3-border-light-green w3-padding-16">ABOUT JADE SPACE</h3>
+   </div>
+ 
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Jade Space <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            CLICK ME
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item active" href="#projects">Projects</a>
-            <a class="dropdown-item active" href="#about">About</a>
-            <a class="dropdown-item active" href="#contact">Contact</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Logout</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav> -->
-<!-- <div class="w3-top">
-  <div class="w3-bar w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>JS</b>  Jade Space </a>
-    <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-      <a href="#about" class="w3-bar-item w3-button">Followers</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    </div>
-  </div>
-</div> -->
-<!-- end of header -->
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-    <img class="w3-image" src="./assests/images/Michael-Carini-Arts.jpg" alt="Architecture" width="1500" height="300">
-    <div class="w3-display-middle w3-margin-top w3-center">
-      <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>ARTISTS</b></span> <span class="w3-hide-small w3-text-light-grey">UNITE</span></h1>
-    </div>
-  </header>
-<!-- end of header -->
-
-<!-- Modals -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5>GOKU-USERNAME</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <img src="./assests/images/art.jpg" alt="ART" style="width: 100%">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5>SKETCHES-USERNAME</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <img src="./assests/images/art2.jpg" alt="ART" style="width:100%"> 
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-<!-- Project Section -->
-<div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-green w3-padding-16">JADESPACE FEED</h3>
-  </div>
-    
-    <div class="container">
-    <div class="row">
-      <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
-              <div class="MultiCarousel-inner">
-                  <div class="item">
-                      <div class="pad15">
-                        <div class="w3-display-container" data-toggle="modal" data-target="#exampleModalLong">
-                          <div class="w3-display-topleft w3-black w3-padding">GOKU-USERNAME</div>
-                          <img src="./assests/images/art.jpg" alt="ART" style="width: 100%">
-                        </div>
-                      </div>
-                  </div>
-                  <div class="item">
-                      <div class="pad15">
-                        <div class="w3-display-container" data-toggle="modal" data-target="#exampleModalLong1">
-                          <div class="w3-display-topleft w3-black w3-padding">Sketches-USERNAME</div>
-                          <img src="./assests/images/art2.jpg" alt="ART" style="width:100%">
-                        </div>
-                      </div>
-                  </div>
-                  <div class="item">
-                      <div class="pad15">
-                        <div class="w3-display-container">
-                          <div class="w3-display-topleft w3-black w3-padding">ANIMATE-USERNAME </div>
-                          <img src="./assests/images/emma_selfportrait.jpg" alt="ART" style="width:99%">
-                        </div>
-                      </div>
-                  </div>
-                  <div class="item">
-                      <div class="pad15">
-                        <div class="w3-display-container">
-                          <div class="w3-display-topleft w3-black w3-padding">PhotoShoot-USERNAME</div>
-                          <img src="./assests/images/art3.jpg" alt="ART" style="width:100%">
-                        </div> 
-                      </div>
-                  </div>
-                  <div class="item">
-                      <div class="pad15">
-                        <div class="w3-display-container">
-                          <div class="w3-display-topleft w3-black w3-padding">InkArt-USERNAME</div>
-                          <img src="./assests/images/profile_pic.jpeg" alt="ART" style="width:99%">
-                        </div> 
-                      </div>
-                  </div>
-                  <div class="item">
-                      <div class="pad15">
-                        <div class="w3-display-container">
-                          <div class="w3-display-topleft w3-black w3-padding">FanArt-USERNAME</div>
-                          <img src="./assests/images/post_pic.jpeg" alt="ART" style="width:100%">
-                        </div>
-                      </div>
-                  </div>
-                  <div class="item">
-                      <div class="pad15">
-                        <div class="w3-display-container">
-                          <div class="w3-display-topleft w3-black w3-padding">ArtWork-USERNAME</div>
-                          <img src="./assests/images/grasshopper-graphic.png" alt="ART" style="width:99%">
-                        </div>
-                      </div>
-                  </div>
-              </div>
-              <button class="btn leftLst" id="next-btn"><</button>
-              <button class="btn rightLst" id="next-btn">></button>
-          </div>
-    </div>
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-      <h3 class="w3-border-bottom w3-border-light-green w3-padding-16">FOLLOWERS</h3>
-    </div>
-  
-    <div class="w3-row-padding" id="about">
-      <div class="w3-col l3 m6 w3-margin-bottom" id="followers">
-        <img src="./assests/images/Profile-512.png" alt="John" style="width:100px; height:100px;">
-        <h3>CHUYLOOPS</h3>
-        <p class="w3-opacity">ARTIST & PHOTOGRAPHER</p>
-        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        <p><button class="w3-button w3-block" id="contact-b">Contact</button></p>
-      </div>
-    <div class="w3-row-padding">
-      <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./assests/images/Profile-512.png" alt="John" style="width:100px; height:100px;">
-      <h3>EMMA</h3>
-      <p class="w3-opacity">ARTIST & ANIMATER</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-row-padding">
-      <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./assests/images/Profile-512.png" alt="John" style="width:100px; height:100px;">
-      <h3>ANDY</h3>
-      <p class="w3-opacity">CODER & BACKEND DEVELOPER</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-    <div class="w3-row-padding"></div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./assests/images/Profile-512.png" alt="John" style="width:100px; height:100px;">
-      <h3>DEVON</h3>
-      <p class="w3-opacity">CODER & COOK</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-    </div>
-  
-    <!-- Contact Section -->
-
-    <div class="w3-container w3-padding-32" id="contact">
-      <h3 class="w3-border-bottom w3-border-light-green w3-padding-16">Contact</h3>
-      <p>Lets get in touch to talk or exchange art.</p>
-      <form action="/action_page.php" target="_blank">
-        <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-        <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-        <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-        <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-        <button class="w3-button w3-section" id="button" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
-    </div>
-  <!-- End page content -->
-  
-  
-  
-  <!-- Footer -->
-
-  <footer class="footer text-center">
-    <div class="container">
-      <div class="row">
-
-        <!-- Footer Location -->
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">1200 University Ave, Riverside, CA 92507
-            <br>Riverside, CA 65243</p>
-        </div>
-
-        <!-- Footer Social Icons -->
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Around the Web</h4>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
-            <i class="fab fa-fw fa-facebook-f"></i>
-          </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
-            <i class="fab fa-fw fa-linkedin-in"></i>
-          </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
-            <i class="fab fa-fw fa-dribbble"></i>
-          </a>
-        </div>
-
-        <!-- Footer About Text -->
-        <div class="col-lg-4">
-          <h4 class="text-uppercase mb-4">About JADE SPACE</h4>
-          <p class="lead mb-0">JADE_SPACE is a free to use website to unlock your art desires.</p>
-        </div>
-
-      </div>
-    </div>
-  </footer>
-
-  <!-- <footer class="page-footer font-small green" id="footer">
-      <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-  </div>
-  </footer> -->
-  
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="assests/javascript/main-page.js"></script>
-  </body>
-  </html>
-
+ 
+   <div class="site-section section-2 bg-light parallax" id="process-section" data-aos="fade">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-6 mb-5">
+           <h2 class="section-title">THE IDEA</h2>
+           <p id="pp">Jade Space is built to unite artist and creative thinkers alike. Jade Space is a platform
+             to begin in and use through out your creative career. It offers the most when it comes to exposire and tools to succeed.
+           </p>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+           <div class="process bg-white rounded">
+             <div>
+               <span class="flaticon-glasses display-4 text-primary mb-4 d-inline-block"></span>
+               <h3>Create</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam
+                 voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore
+                 molestias blanditiis consequuntur sunt nisi.</p>
+             </div>
+ 
+           </div>
+         </div>
+         <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+           <div class="process bg-white rounded">
+             <div>
+               <span class="flaticon-vector display-4 text-primary mb-4 d-inline-block"></span>
+               <h3>Share</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam
+                 voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore
+                 molestias blanditiis consequuntur sunt nisi.</p>
+             </div>
+ 
+           </div>
+         </div>
+         <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+           <div class="process bg-white rounded">
+             <div>
+                 <span class="flaticon-glasses display-4 text-primary mb-4 d-inline-block"></span>
+               <h3>Inspire</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam
+                 voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore
+                 molestias blanditiis consequuntur sunt nisi.</p>
+             </div>
+ 
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ 
+   <!-- Contact Section -->
+ 
+   <div class="w3-container w3-padding-32" id="contact">
+     <h3 class="w3-border-bottom w3-border-light-green w3-padding-16">Contact</h3>
+     <p>Lets get in touch to talk or exchange art.</p>
+     <form action="/action_page.php" target="_blank">
+       <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+       <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+       <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+       <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+       <button class="w3-button w3-section" id="button" type="submit">
+         <i class="fa fa-paper-plane"></i> SEND MESSAGE
+       </button>
+     </form>
+   </div>
+ 
+   <!-- End page content -->
+ 
+ 
+ 
+   <!-- Footer -->
+ 
+   <footer class="footer text-center">
+     <div class="container">
+       <div class="row">
+ 
+         <!-- Footer Location -->
+ 
+         <div class="col-lg-4 mb-5 mb-lg-0">
+           <h4 class="text-uppercase mb-4">Location</h4>
+           <p class="lead mb-0">1200 University Ave, Riverside, CA 92507
+             <br>Riverside, CA 65243</p>
+         </div>
+ 
+         <!-- Footer Social Icons -->
+ 
+         <div class="col-lg-4 mb-5 mb-lg-0">
+           <h4 class="text-uppercase mb-4">JADE SPACE</h4>
+           <a class="btn btn-outline-light btn-social mx-1" href="#">
+             <i class="fab fa-fw fa-facebook-f"></i>
+           </a>
+           <a class="btn btn-outline-light btn-social mx-1" href="#">
+             <i class="fab fa-twitter"></i>
+           </a>
+           <a class="btn btn-outline-light btn-social mx-1" href="#">
+             <i class="fab fa-fw fa-linkedin-in"></i>
+           </a>
+           <a class="btn btn-outline-light btn-social mx-1" href="#">
+             <i class="fab fa-fw fa-dribbble"></i>
+           </a>
+         </div>
+ 
+         <!-- Footer About Text -->
+ 
+         <div class="col-lg-4">
+           <h4 class="text-uppercase mb-4">About JADE SPACE</h4>
+           <p class="lead mb-0">JADE_SPACE is a free to use website to unlock your art desires.</p>
+         </div>
+ 
+       </div>
+     </div>
+   </footer>
+   <!-- script tags for js and other sources -->
+ 
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+     crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+     crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+     crossorigin="anonymous"></script>
+   <script src="assests/javascript/main-page.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+ 
 </html>
+ 
+</body>
+ 
+</html>
+
