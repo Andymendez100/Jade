@@ -298,7 +298,7 @@ float: left;
  
  .parallax {
    /* The image used */
-   background-image: url("/views/assests/images/All_The_Greens.jpg");
+   background-image: url("https://fineartconnoisseur.com/wp-content/uploads/sites/2/2019/02/fine-art-acrylici-paintings-Morton-Kaish_Cherry_Buds_1998.jpg");
     /* Set a specific height */
    min-height: 500px;
     /* Create the parallax scrolling effect */
