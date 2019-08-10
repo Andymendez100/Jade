@@ -28,7 +28,8 @@ $(document).ready(() => {
             email: email,
             password: password
         }).then((data) => {
-            // console.log(data);
+
+            console.log(data);
             sessionStorage.setItem("id", data)
             window.location.replace("/members");
             // If there's an error, log the error
