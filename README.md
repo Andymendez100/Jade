@@ -5,12 +5,14 @@ Users will be able to upload artwork, build networks, and potentially facilitate
 
 It is built on node.js for the backend and jquery on the front end.
 
+
 ## Dependencies
 
 * NPM aws-sdk, bcryptjs, busboy, busboy-body-parser, connect-busboy, dotenv, express, express-session, mysql, mysql2, passport, passport-facebook, passport-google-oauth, passport-local, passport-twitter, sequelize
 
 * (DEV Dependency) nodemon
 
+This application is live on: https://frozen-retreat-71072.herokuapp.com/
 ## Pages
 
 Viewers will first see the JADE_SPACE home page, an introduction to what the application can offer.
