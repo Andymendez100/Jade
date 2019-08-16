@@ -17,7 +17,7 @@ This application is live on: https://frozen-retreat-71072.herokuapp.com/
 
 Viewers will first see the JADE_SPACE home page, an introduction to what the application can offer.
 
-![](views/assests/images/JS_main.png)
+![](views/assests/images/JS_main page_FINAL.png)
 
 Viewers are prompted to sign-up or login.
 
