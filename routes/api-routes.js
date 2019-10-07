@@ -37,9 +37,7 @@ function uploadToS3(file) {
     });
   });
 }
-// function (url) {
-//   db
-// }
+
 module.exports = app => {
   app.post('/api/upload', function (req, res, next) {
     // This grabs the additional parameters so in this case passing in
@@ -58,7 +56,7 @@ module.exports = app => {
       // Begins the upload to the AWS S3
       uploadToS3(file);
       var url = `https://jade-main-feed.s3-us-west-1.amazonaws.com/${file.name}`
-      console.log(url);
+      // console.log(url);
 
       // var urlParams = { Bucket: BUCKET_NAME, Key: file.name }
       // var url = s3.getSignedUrl('getObject', urlParams);
@@ -72,18 +70,19 @@ module.exports = app => {
     });
     // upload to database
     req.pipe(busboy);
-    setTimeout(function () {
-      console.log("TimeOutWorking");
+    res.redirect('/members')
+    // setTimeout(function () {
+    //   console.log("TimeOutWorking");
 
-      res.redirect("/members")
-    }, 10000);
+    //   res.redirect("/members")
+    // }, 10000);
 
 
   });
-  // Using the passport.authenticate middleware with our local strategy.
-  // If the user has valid login credentials, send them to the members page.
-  // Otherwise the user will be sent an error
+
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
+    console.log('working');
+    
 
     db.User.findOne({
       where: {
@@ -96,15 +95,10 @@ module.exports = app => {
     }).catch(function (err) {
       console.log(err);
     })
-    // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
-    // So we're sending the user back the route to the members page because the redirect will happen on the front end
-    // They won't get this or even be able to access this page if they aren't authed
-    // res.send("/members");
+
   });
   //
-  // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
-  // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
-  // otherwise send back an error
+
   app.post("/api/signup", (req, res) => {
     //console.log(req.body);
     db.User.create({
@@ -112,7 +106,7 @@ module.exports = app => {
       password: req.body.password
     })
       .then(() => {
-        res.redirect(307, "/api/login");
+        res.redirect("/members");
       })
       .catch(err => {
         console.log(err);

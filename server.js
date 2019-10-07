@@ -1,16 +1,13 @@
 // Requiring necessary npm packages
 const express = require("express");
 const session = require("express-session");
-// Requiring passport as we've configured it
 const passport = require("./config/passport");
-//passport for facebook/twitter/google
+
 
 require('dotenv').config()
 
 const busboy = require('connect-busboy');
 const busboyBodyParser = require('busboy-body-parser');
-// const twitter = require ("./config/passport-twitter")
-// const google = require("./config/passport-google")
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
@@ -34,7 +31,7 @@ require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 //
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(() => {
+db.sequelize.sync({force:true}).then(() => {
   app.listen(PORT, () => {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
   });
