@@ -70,7 +70,7 @@ module.exports = app => {
     });
     // upload to database
     req.pipe(busboy);
-    res.redirect('/members')
+    res.redirect(200, '/members')
     // setTimeout(function () {
     //   console.log("TimeOutWorking");
 
@@ -81,21 +81,19 @@ module.exports = app => {
   });
 
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-    console.log('working');
     
-
     db.User.findOne({
       where: {
         email: req.body.email
       }
     }).then(function (user) {
       current_user = user.id
-      res.json(user.id);
-
+      // res.json(user.id);
+     
     }).catch(function (err) {
       console.log(err);
     })
-
+    res.redirect("/members");
   });
   //
 
@@ -106,12 +104,13 @@ module.exports = app => {
       password: req.body.password
     })
       .then(() => {
-        res.redirect("/members");
+        // res.redirect("/login");
       })
       .catch(err => {
         console.log(err);
         res.json(err);
       });
+    res.redirect("/login");
   });
   //
   // Route for logging user out

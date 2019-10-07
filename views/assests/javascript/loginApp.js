@@ -29,19 +29,19 @@ $(document).ready(() => {
         $.post("/api/login", {
             email: email,
             password: password
-        }).then((data) => {
-
-            console.log(data);
-            sessionStorage.setItem("id", data)
-            window.location.replace("/members");
-            // If there's an error, log the error
-        }).catch((err) => {
+        }).then((data,err) => {
             if (err.status === 401) {
                 alert("Incorrect email or password");
-
-
             }
-        });
+            if (err.status === 500){
+                alert('No user found')
+            }
+            // console.log(data);
+            // sessionStorage.setItem("id", data)
+            window.location.replace("/members");
+            // If there's an error, log the error
+        })           
+        
     }
 
 

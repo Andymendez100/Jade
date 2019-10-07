@@ -19,60 +19,18 @@
   <div id="login-box">
     <div class="left-box">
       <h1> Sign Up</h1>
-      <input type="email" name="email" id="signUpInput" placeholder="Email">
-      <input type="text" name="password" id="passwordInput" placeholder="Password">
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">
-        <input type="submit" name="signop-button" value="sign up" id="signUpButton">
-      </a>
+      <form action="/api/signup" method="POST">
+        <input type="email" name="email" id="signUpInput" placeholder="Email">
+        <input type="password" name="password" id="passwordInput" placeholder="Password">
+        <button type="submit" class="waves-effect waves-light btn modal-trigger"> Sign Up</button>
+        </a>
+      </form>
       <p>
         Already have an account? Sign In <a href="/login" style="color: #039be5">Here</a>
     </div>
     <div class="right-box">
-      <!-- <span class="signinwith">Sign in with<br />Social Network
-        ​
-        <button class="social facebook">
-          <a href="">Facebook</a>
-        </button>
-         <button class="social twitter">
-          <a href="/auth/twitter">Sign in with Twitter</a>
-        </button>
-        <button class="social google ">
-          <a href="/auth/google">Sign In with Google+</a>
-        </button> -->
     </div>
 
-    <!-- <div class="or">OR</div>
- -->
-
-
-    ​
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal modal-fixed-footer">
-      <div class="modal-content">
-        <h4>Mobile App Disclaimer</h4>
-        <p>
-          The information provided by "JADESPACE LLC" ("we", "us", or "our")
-          on Jadespace.com and our mobile application is provided in good
-          faith, however we make no representation or warranty of any kind,
-          expressed or implied, regarding the accuracy, adequacy, validity,
-          reliability, availability, or completeness of any information on the
-          Site or our mobile application.
-        </p>
-        <p>
-          Under no circumstances shall we have any liability to you for any
-          monies exchanged, any loss or damage of any kind incurred as a
-          result of the use of the site or our mobile application. Your use of
-          the site and our mobile application and you reliance on any
-          information on these platforms is solely at your own risk. if you
-          have any questions pertaining to this disclaimer email us at
-          questions@jadespace.com.
-        </p>
-      </div>
-      <div class="modal-footer">
-        <!-- Modal Trigger -->
-        <a href="/members" class="modal-close waves-effect waves-green btn-flat">I Understand</a>
-      </div>
-    </div>
   </div>
 
   <footer>
@@ -82,8 +40,8 @@
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="./assests/javascript/sign-up.js"></script>
-  <script src="./assests/javascript/signUp.js"></script>
+  <!-- <script src="./assests/javascript/sign-up.js"></script> -->
+  <!-- <script src="./assests/javascript/signUp.js"></script> -->
 </body>
 
 </html>
