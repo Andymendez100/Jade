@@ -168,13 +168,16 @@ html {
 .card-footer:last-child {
   border-radius: 0 0 calc(0.5rem - 0.125rem) calc(0.5rem - 0.125rem);
 }
-
-#footer {
-  position: absolute;
+footer {
+  position: fixed;
   bottom: 0;
   width: 100%;
-  height: 60px; /* Height of the footer */
-  background-color: rgb(103, 182, 103);
+  left: 0%;
+  background-color: rgb(54, 150, 102);
+  color: white;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
 }
 
 /* header */

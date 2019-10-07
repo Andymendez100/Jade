@@ -5,210 +5,154 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jade Feed</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assests/css/feed.css">
-  <title>JADE_Feed</title>
 </head>
 
 <body>
-  <!-- Page content -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/"><strong>JS JADE_SPACE</strong><span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-
-
-  <!-- Underneath Jade Space header will have:
-    1. Thumbnail user avatar
-    2. Words "My Feed" (or other) within block
-  Feed will then have notifications of new content provided by creators/artists they follow -->
   <div class="container">
-    <!-- Area for USER AVATAR, text display 'MY FEED'-->
-    <div class="row" id="topRow">
+    <div class="row">
+      <div class="col s12">
+        <!-- Nav Bar-->
+        <nav class="navbar navbar-expand-lg bg-success text-uppercase fixed-top">
+          <a class="navbar-brand js-scroll-trigger navBarText" href="/">JADE SPACE</a>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger navBarText" href="/">Home</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger navBarText" href="/logout">Log Out</a>
+              </li>
+            </ul>
 
-      <div class="col-md-6" id="feed-banner">
-        <div class="card" id="cardBox">
-          <div class="card-body" style="margin-top: 10px;">
-            <h3>My Feed</h3>
           </div>
+      </div>
+    </div>
+    </nav>
+    <!-- Jumbotron -->
+    <div class="row">
+      <div class="col s12">
+        <div class="jumbotron jumbotron-fluid feedJumbo">
+          <!-- <div class="container"> -->
+          <h1 class="display-4">Welcome to Jade Space</h1>
+          <p class="lead">Show us your Art!</p>
+          <!-- </div> -->
         </div>
       </div>
-      <!-- User input to put pictures and write a post-->
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
-              style="margin-bottom:1rem;">Upload Art</button>
+    </div>
 
-            <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">
+    <!-- Modal for uploading pictures -->
+    <div class="row">
+      <div class="col s6">
+        <div class="modalContainer ">
+          <button data-target="modal1" class="btn modal-trigger">Upload Picture</button>
+          <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content center-align ">
+              <h4>Upload Your Picture!</h4>
+              <p>Make sure to include your email so people can contact your if they are interested!</p>
+              <br>
+              <br>
+              <div class="row">
+                <div class='col s12 '>
+                  <form action="/api/upload" method="POST" enctype="multipart/form-data">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <!-- <h4 class="modal-title">Upload Window</h4> -->
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      <form action="/api/upload" method="POST" class="image-form" enctype="multipart/form-data">
-                        <input id="image-upload" class="file-add" type="file" accept="image/*" name="element2"
-                          style="margin-bottom:1rem;" />
-                        <!-- <input type="text" placeholder="Write something here.." name=userContent> -->
-                        <div class="input-group" style="margin-bottom:1rem;">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Text</span>
-                          </div>
-                          <textarea class="form-control" name="userContent" aria-label="With textarea"
-                            placeholder="Write something here.."></textarea>
-                        </div>
-                        <!-- <input type="number" placeholder="Inset price here..." name=userNumber> -->
-                        <!-- <input type="number"  style="margin-bottom:1rem;" name="userNumber" min="0" step=".01" placeholder="Insert price here..."> -->
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">$</span>
-                            <span class="input-group-text">0.00</span>
-                          </div>
-                          <input type="numbers" name="userNumber" class="form-control"
-                            aria-label="Dollar amount (with dot and two decimal places)"
-                            placeholder="Insert price here...">
-                        </div>
-                        <input type="hidden" id="userId" name="userId" value="">
-                        <button type="submit" id="image-upload" class="btn btn-info">Upload Post</button>
-                      </form>
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
-                  </div>
+                    <!-- Price Tag -->
+                    <h5 class="left-align">Price for Item:</h5>
+                    <input type="number" name="userNumber" class="form-control mb-4"
+                      aria-label="Dollar amount (with dot and two decimal places)" placeholder="Insert price here...">
+
+                    <!-- User Content -->
+                    <h5 class="left-align">Insert Message: ( Don't forget your email! )</h5>
+                    <div class="input-group mb-4 ">
+                      <div class="input-group-prepend ">
+                        <span class="input-group-text">Message:</span>
+                      </div>
+                      <textarea class="form-control userMessage" name="userContent" aria-label="With textarea"
+                        placeholder="Write something here.."></textarea>
+                    </div>
+
+                    <!-- file Upload -->
+                    <h5 class="left-align">Upload file:</h5>
+                    <div class="input-group mb-4">
+                      <div class="custom-file">
+
+                        <input type="file" class="custom-file-input image-upload" accept="images/*"
+                          id="inputGroupFile02 image-upload" name="element2">
+                        <label class="custom-file-label" for="inputGroupFile02"
+                          aria-describedby="inputGroupFileAddon02">Choose file</label>
+                      </div>
+                    </div>
+                    <button type="submit" id="image-upload" class="btn btn-info">Upload Post</button>
                 </div>
-
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
-    </div> <!-- to close Row for avatar and My Feed -->
-
-
-
-    <div id="feed-body">
-      <div class="row">
-        <p><a href="#" id="clearButton" class="btn btn-primary float-left">Clear All</a></p>
-      </div>
-      <!-- ideally, these all have an x-button to delete notifications
-    - a 'CLEAR' button at the bottom below notifications to delete all displayed alerts
-    - when notifs are cleared, show message "No New messages" -->
-
-      <div class="row" id="welcome">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-body">
-              <!-- <div class="x-button">
-                <button type="button" class="btn btn-primary float-left">X</button></div> -->
-              <h1>🎊</h1>
-              <p class="lead"><strong>Congratulations on joining JadeSpace! We are happy to welcome you to our community
-                  of
-                  artists.
-                  <br>Find artists to follow, make friends, or just browse art to your heart's delight.</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="buffer">
-        <!-- Presumable area for buffer element -->
-      </div>
-
-      <div class="row" id="notifs">
-        <!-- <div class="x-button">
-            <button type="button" class="btn btn-primary float-left">X</button></div> -->
-
-        <!-- <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img src="../views/assests/images/emma_selfportrait.jpg" class="img-thumbnail" alt="...">
-            <p class="lead" style="clear: both;">
-              Some quick example text to build on the card title and make up the bulk of the card's
-              content.
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img src="../views/assests/images/profile_pic.jpeg" class="img-thumbnail">
-            <p class="lead" style="clear: both;">
-              <a href="#"><strong>CHUYLOOPS</strong></a> submitted 'Profile Pic' to their gallery!
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <img src="../views/assests/images/art.jpg" class="img-thumbnail">
-            <p class="lead" style="clear: both;">
-              <a href="#"><strong>CHUYLOOPS</strong></a> submitted 'Son Goku' to their gallery!
-            </p>
-          </div>
-        </div> -->
-
-
-        <!-- Don't hide these divs. -->
-      </div>
     </div>
-    <!-- =========================== -->
 
-    <!-- <div class="row">
-        <div class="col-md-12">
-          <div class="card">
-            <div class="card-body">
-              <a href="#" class="btn btn-primary float-left">X</a>
-              <img src="../views/assests/images/namroud-gorguis-tape-unsplash.jpg" class="img-thumbnail float-left">
-              <p class="lead">EXAMPLE of how music submission would display</p>
-            </div>
-          </div>
+    <!-- Display pictures here -->
+    <div class=' row pictureDisplay'>
+      <!-- 
+      <div class="card" style="width: 18rem;">
+        <img src="./assests/images/Michael-Carini-Arts.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
         </div>
-      </div>-->
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./assests/images/grasshopper-graphic.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./assests/images/image-3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./assests/images/Michael-Carini-Arts.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./assests/images/Michael-Carini-Arts.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
+        </div>
+      </div> -->
 
-    <!-- Don't hide the lower two divs. -->
-  </div>
+    </div>
   </div>
 
+
+
+  <!-- Footer -->
   <footer>
-    <div class="container">
-      Copyright &copy; Jade Space 2019
-    </div>
+    Copyright &copy; Jade Space 2019
   </footer>
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="./assests/javascript/userFeed.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src='./assests/javascript/userFeed.js'></script>
 </body>
 
 </html>
