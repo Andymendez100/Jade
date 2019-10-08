@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assests/css/feed.css">
 </head>
 
@@ -16,6 +17,7 @@
   <div class="container">
     <div class="row">
       <div class="col s12">
+
         <!-- Nav Bar-->
         <nav class="navbar navbar-expand-lg bg-success text-uppercase fixed-top">
           <a class="navbar-brand js-scroll-trigger navBarText" href="/">JADE SPACE</a>
@@ -28,19 +30,17 @@
                 <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger navBarText" href="/logout">Log Out</a>
               </li>
             </ul>
-
           </div>
       </div>
     </div>
     </nav>
+
     <!-- Jumbotron -->
     <div class="row">
       <div class="col s12">
         <div class="jumbotron jumbotron-fluid feedJumbo">
-          <!-- <div class="container"> -->
           <h1 class="display-4">Welcome to Jade Space</h1>
-          <p class="lead">Show us your Art!</p>
-          <!-- </div> -->
+          <p class="lead">Display your art to the world!</p>
         </div>
       </div>
     </div>
@@ -48,8 +48,8 @@
     <!-- Modal for uploading pictures -->
     <div class="row">
       <div class="col s6">
-        <div class="modalContainer ">
-          <button data-target="modal1" class="btn modal-trigger">Upload Picture</button>
+        <div class="modalContainer center-align ">
+          <button data-target="modal1" class="btn modal-trigger ">Upload Picture</button>
           <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content center-align ">
               <h4>Upload Your Picture!</h4>
@@ -62,18 +62,18 @@
                     <!-- Title-->
                     <h5 class="left-align">Put title for item:</h5>
 
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Title"
+                    <input type="text" class="form-control" placeholder="Title" aria-label="Title"
                       aria-describedby="basic-addon1" name="userTitle">
 
 
                     <!-- Price Tag -->
                     <h5 class="left-align">Price for Item:</h5>
-                    <input type="number" name="userNumber" class="form-control mb-4"
+                    <input type="number" name="userNumber" class="form-control mb-2"
                       aria-label="Dollar amount (with dot and two decimal places)" placeholder="Insert price here...">
 
                     <!-- User Content -->
                     <h5 class="left-align">Insert Message: ( Don't forget your email! )</h5>
-                    <div class="input-group mb-4 ">
+                    <div class="input-group mb-2">
                       <div class="input-group-prepend ">
                         <span class="input-group-text">Message:</span>
                       </div>
@@ -83,7 +83,7 @@
 
                     <!-- file Upload -->
                     <h5 class="left-align">Upload file:</h5>
-                    <div class="input-group mb-4">
+                    <div class="input-group mb-2">
                       <div class="custom-file">
 
                         <input type="file" class="custom-file-input image-upload" accept="images/*"

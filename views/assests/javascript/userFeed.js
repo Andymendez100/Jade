@@ -4,7 +4,6 @@ $(document).ready(function() {
   $.get('/api/userfeed').then(function(data) {
     console.log(data);
     for (let i = 0; i < data.length; i++) {
-      data[i].postImage;
       const content = data[i].postContent;
       const price = data[i].postPrice;
       const title = data[i].postTitle;
@@ -19,7 +18,7 @@ $(document).ready(function() {
           <div class="flip-card-back">
             <h1> ${title} </h1>
             <p> Asking Price: $${price} </p>
-            <p> ${content} </p>
+            <p > ${content} </p>
           </div>
         </div>
       </div>`
