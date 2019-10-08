@@ -48,6 +48,7 @@ module.exports = app => {
         postImage: url,
         postContent: req.body.userContent,
         postPrice: req.body.userNumber,
+        postTitle: req.body.userTitle,
       });
     });
     // upload to database

@@ -1,5 +1,5 @@
-module.exports = function (sequelize, DataTypes) {
-  let Feed = sequelize.define("Feed", {
+module.exports = function(sequelize, DataTypes) {
+  const Feed = sequelize.define('Feed', {
     // The email cannot be null, and must be a proper email before creation
     user: {
       type: DataTypes.STRING,
@@ -10,19 +10,20 @@ module.exports = function (sequelize, DataTypes) {
     },
     postPrice: {
       type: DataTypes.DOUBLE,
-
     },
     postImage: {
       type: DataTypes.STRING,
-
-    }
+    },
+    postTitle: {
+      type: DataTypes.STRING,
+    },
   });
-  Feed.associate = function (models) {
+  Feed.associate = function(models) {
     Feed.belongsTo(models.User, {
       foreignKey: {
-        allowNull: true
-      }
-    })
-  }
+        allowNull: true,
+      },
+    });
+  };
   return Feed;
-}
+};
