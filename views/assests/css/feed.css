@@ -1,78 +1,42 @@
-/* GENERAL PAGE CONTENT */
-/* Do NOT try to combine html and body elements. This will prevent sticky footer from working. - EMMA */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
-  /*background-image: url(); */
-  background-color:rgb(127, 202, 165);
+  background-color: rgb(127, 202, 165);
 }
-
-#topRow {
-  margin-top: 3em;
-}
-
-.modal-header .close {
-  margin: 0;
-}
-
-.img-thumbnail {
- margin: auto;
- margin-bottom: 10px;
- height: 150px;
- width: 150px;
-}
-
-.navbar-header{
-  margin-right: 22rem;
-}
-
-#clearButton {
-  margin-left: 10px;
-}
-
-#jade-logo{
+.navBarText {
   color: white;
 }
-
-#user-av-thumb {
-  height: 100px;
-  width: 100px;
-  margin-left: 5em;
-}
-
-/* container row for dynamically generated cards of user content */
-#notifs {
-  justify-content: space-between;
-}
-
-#feed-body {
-  height: 100px;
-}
-
-#cardBox{
-  height: 100px;
-}
-.card {
-  margin-bottom: 50px;
-}
-
-.card-body {
-  text-align: center;
-}
-
 footer {
   position: fixed;
   bottom: 0;
-  height: 2.5rem; 
   width: 100%;
-  background-color:rgb(54, 150, 102);
-  color:white;
+  left: 0;
+  background-color: rgb(54, 150, 102);
+  color: white;
   justify-content: center;
   text-align: center;
-  padding: 5px; 
+  padding: 15px;
+}
+.feedJumbo {
+  margin-top: 7%;
+  background-color: rgba(84, 110, 122, 0.8);
+  color: whitesmoke;
+  text-align: center;
 }
 
+.uploadFeed {
+  background-color: rgba(84, 110, 122, 0.8);
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
+.userMessage {
+  height: 10vh;
+}
+.cardImg {
+  height: 200px;
+}
+.userCard {
+  width: 18rem;
+  height: 300px;
+  margin-right: 5%;
+  margin-left: 4%;
+  margin-bottom: 5%;
+}
