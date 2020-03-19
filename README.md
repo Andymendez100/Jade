@@ -1,10 +1,13 @@
 # JADE_SPACE
 
-JADE_SPACE provides an art-oriented space for artists and art appreciators.
-Users will be able to upload artwork, build networks, and potentially facilitate bartering/selling of art-related goods. Users share and curate contact information at their own discretion to take advantage of JADE_SPACE.
+`JADE_SPACE` - https://jadespace.herokuapp.com/
+
+## Application
+
+Application provides an art-oriented space for artists and art appreciators.
+Users will be able to upload artwork, build networks, and potentially facilitate bartering/selling of art-related goods. Users share and curate contact information at their own discretion to take advantage of `JADE_SPACE`.
 
 It is built on node.js for the backend and jquery on the front end.
-
 
 ## Dependencies
 
@@ -12,14 +15,20 @@ It is built on node.js for the backend and jquery on the front end.
 
 * (DEV Dependency) nodemon
 
-This application is live on: https://jadespace.herokuapp.com/
-## Pages
+## Instructions
 
-Viewers will first see the JADE_SPACE home page, an introduction to what the application can offer.
+1. Viewers will first see the JADE_SPACE home page, an introduction to what the application can offer.
 
 ![](views/assests/images/JS_main page_FINAL.png)
 
-Viewers are prompted to sign-up or login.
+2. Viewers are prompted to sign-up or login.
 
 ![](views/assests/images/JS_signUpPage.png)
 ![](views/assests/images/JS_loginPage.png)
+
+## Contributors
+
+* Andy Mendez (Team Leader)
+* Devin Jenkins
+* Emma Delzer
+* Jesus Alpizar
